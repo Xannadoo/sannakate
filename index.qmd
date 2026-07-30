@@ -1,0 +1,14 @@
+---
+title: "Sanna Kate"
+---
+
+## Hi, I'm Sanna
+
+I'm a data scientist based in Copenhagen, with a background spanning financial administration, process coordination, and healthcare before moving into data science. I recently completed my MSc in Data Science at ITU Copenhagen, where my thesis examined chain-of-thought reasoning faithfulness in LLMs.
+
+I'm currently looking for data science and research-focused roles in the Copenhagen area.
+
+- [View my CV](cv.qmd)
+- [See my projects](projects/index.qmd)
+
+You can also find me on [LinkedIn](https://linkedin.com) and [GitHub](https://github.com).

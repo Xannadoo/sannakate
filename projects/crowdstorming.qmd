@@ -1,0 +1,22 @@
+---
+title: "Referee Bias Analysis"
+---
+
+## Overview
+
+A personal statistical analysis using the Crowdstorming dataset (Silberzahn et al., 2018) to examine whether referees issue red cards at different rates depending on players' skin tone.
+
+## Approach
+
+Built three increasingly complex GLM/GLMM models, checking whether findings held up as complexity increased. Used this project to refresh R skills after a multi-year break working mainly in Python.
+
+## Tools
+
+R, GLM/GLMM
+
+## Status
+
+Write-up in progress. A next step is extending the analysis to yellow cards as an additional outcome variable.
+
+<!-- Add a link here once there's a deployed app or report, e.g.:
+[View interactive app →](https://your-streamlit-app-url) -->

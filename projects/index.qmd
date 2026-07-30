@@ -1,0 +1,19 @@
+---
+title: "Projects"
+---
+
+## Referee Bias Analysis (Crowdstorming Dataset)
+
+A statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.
+
+[Read more →](crowdstorming.qmd)
+
+<!-- Add another project block here as you build more, same pattern:
+
+## Project Name
+
+Brief one or two sentence description.
+
+[Read more →](project-slug.qmd)
+
+-->
