@@ -1,5 +1,0 @@
----
-title: "Recipes"
----
-
-Recipes and blog posts from the old sannakate website.

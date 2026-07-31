@@ -1,19 +1,24 @@
 ---
-title: "Projects"
+title: "Referee Bias Analysis"
 ---
 
-## Referee Bias Analysis (Crowdstorming Dataset)
+## Overview
 
-A statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.
+A personal statistical analysis using the Crowdstorming dataset (Silberzahn et al., 2018) to examine whether referees issue red cards at different rates depending on players' skin tone.
 
-[Read more →](crowdstorming.qmd)
+The main goal was to refresh R skills after working mainly in Python for the last few years.
 
-<!-- Add another project block here as you build more, same pattern:
+## Approach
 
-## Project Name
+Built three increasingly complex GLM/GLMM models, checking whether findings held up as complexity increased. 
 
-Brief one or two sentence description.
+## Tools
 
-[Read more →](project-slug.qmd)
+R, GLM/GLMM
 
--->
+## Status
+
+Write-up in progress. A next step is extending the analysis to yellow cards as an additional outcome variable.
+
+<!-- Add a link here once there's a deployed app or report, e.g.:
+[View interactive app →](https://your-streamlit-app-url) -->

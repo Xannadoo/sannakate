@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Sanna Kate"
+  title: "Sannakate"
   navbar:
     left:
       - href: index.qmd
@@ -12,8 +12,6 @@ website:
         text: CV
       - href: projects/index.qmd
         text: Projects
-      - href: recipes/
-        text: Recipes
 
 format:
   html:

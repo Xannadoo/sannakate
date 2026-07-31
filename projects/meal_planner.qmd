@@ -1,0 +1,33 @@
+---
+title: "Meal Planner"
+---
+
+## Overview
+
+I built a meal planning system for my family. It scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety (because despite what my kids might want, we are *not* eating pasta every night!).
+
+I wanted to show that I could take a project from idea to implementation,and make something that was useful to me (and maybe others!). I wanted to combine a few different skills: web scraping, LLMs, and building a simple UI so it was accessable to others. In particular, I wanted to see if I could use a local LLM to tag recipes in a way that was useful for meal planning, and to see if I could get it to do that without sending any data to the cloud.
+
+## Approach
+
+I built this with "future me" in mind. Looking out for the part of the system that is small now but could cause a problem later:
+
+- Tuneable config: All weights, thresholds, and site-specific rules (anything I might want to mess around with at 3am when it occurs to me!) live in a config.yaml.
+- Data led: My first attempt at calculating ease felt off. Looking at the actual distributions for cooking and prep times showed me why, and the curves were fitted to what was actually there.
+- Data cleaning: Actually one of my favourite parts of a project. Getting the scraped data from different sites into a consistent format, no sneaky HTML tags hiding to mess things up later. Formatting well from the start saves fussing and fixing later.
+
+There are 2 versions, the first is a fixed version that is publically available, the second is a more flexible version that can be run locally. This version can be customised with recipes, family names and individual ratings for each recipe.
+
+## Tools
+
+- Selenium and BeautifulSoup for scraping
+- Ollama running Qwen2.5:7b for tagging
+- Streamlit for the UI.
+
+## Status
+
+Working, but not perfect and I'd like to mess with it further someday.
+
+Working version of the fixed system: [Streamlit App](sannakatemealplanner.streamlit.app)
+
+Cloneable repo with the code and instructions for running it locally: [GitHub](https://github.com/Xannadoo/web_recipes)

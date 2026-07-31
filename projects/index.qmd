@@ -2,7 +2,19 @@
 title: "Projects"
 ---
 
-## Referee Bias Analysis (Crowdstorming Dataset)
+## Meal Planner, July 2026, complete
+
+A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.
+
+[Read more →](meal_planner.qmd)
+
+## Tefr Glyphs, July 2026, complete
+
+A project that took the enchanters codex from Tefr RPG, and allows you to search for possible spells from known glyphs. 
+
+[Read more →](tefr_glyphs.qmd)
+
+## Referee Bias Analysis (Crowdstorming Dataset) June 2026 ongoing
 
 A statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.
 
