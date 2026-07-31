@@ -5,7 +5,7 @@ title: "CV"
 [Download PDF](cv.pdf){.btn .btn-primary}
 
 ```{=html}
-<iframe src="cv.pdf" width="100%" height="900px" style="border: 1px solid #ddd; margin-top: 1em;">
+<iframe src="cv.pdf" width="200%" height="900px" style="border: 1px solid #ddd; margin-top: 1em;">
   Your browser doesn't support embedded PDFs. Use the download link above instead.
 </iframe>
 ```

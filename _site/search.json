@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "recipes/christmas-cake.html",
+    "href": "recipes/christmas-cake.html",
+    "title": "Christmas Cake",
+    "section": "",
+    "text": "(The one recipe worth keeping from the old blog. Paste it in here.)"
+  },
+  {
+    "objectID": "projects/crowdstorming.html",
+    "href": "projects/crowdstorming.html",
+    "title": "Referee Bias Analysis",
+    "section": "",
+    "text": "A personal statistical analysis using the Crowdstorming dataset (Silberzahn et al., 2018) to examine whether referees issue red cards at different rates depending on players’ skin tone."
+  },
+  {
+    "objectID": "projects/crowdstorming.html#overview",
+    "href": "projects/crowdstorming.html#overview",
+    "title": "Referee Bias Analysis",
+    "section": "",
+    "text": "A personal statistical analysis using the Crowdstorming dataset (Silberzahn et al., 2018) to examine whether referees issue red cards at different rates depending on players’ skin tone."
+  },
+  {
+    "objectID": "projects/crowdstorming.html#approach",
+    "href": "projects/crowdstorming.html#approach",
+    "title": "Referee Bias Analysis",
+    "section": "Approach",
+    "text": "Approach\nBuilt three increasingly complex GLM/GLMM models, checking whether findings held up as complexity increased. Used this project to refresh R skills after a multi-year break working mainly in Python."
+  },
+  {
+    "objectID": "projects/crowdstorming.html#tools",
+    "href": "projects/crowdstorming.html#tools",
+    "title": "Referee Bias Analysis",
+    "section": "Tools",
+    "text": "Tools\nR, GLM/GLMM"
+  },
+  {
+    "objectID": "projects/crowdstorming.html#status",
+    "href": "projects/crowdstorming.html#status",
+    "title": "Referee Bias Analysis",
+    "section": "Status",
+    "text": "Status\nWrite-up in progress. A next step is extending the analysis to yellow cards as an additional outcome variable."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Download PDF\n\n  Your browser doesn't support embedded PDFs. Use the download link above instead."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sannakate",
+    "section": "",
+    "text": "I’m a data scientist based in Copenhagen, with a background spanning financial administration, process coordination, and healthcare before moving into data science. I recently completed my MSc in Data Science at ITU Copenhagen, where my thesis examined chain-of-thought reasoning faithfulness in LLMs.\nI’m currently looking for data science and research-focused roles in the Copenhagen area.\n\nView my CV\nSee my projects\n\nYou can also find me on LinkedIn and GitHub."
+  },
+  {
+    "objectID": "index.html#hi-im-sanna",
+    "href": "index.html#hi-im-sanna",
+    "title": "Sannakate",
+    "section": "",
+    "text": "I’m a data scientist based in Copenhagen, with a background spanning financial administration, process coordination, and healthcare before moving into data science. I recently completed my MSc in Data Science at ITU Copenhagen, where my thesis examined chain-of-thought reasoning faithfulness in LLMs.\nI’m currently looking for data science and research-focused roles in the Copenhagen area.\n\nView my CV\nSee my projects\n\nYou can also find me on LinkedIn and GitHub."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "A statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.\nRead more →"
+  },
+  {
+    "objectID": "projects/index.html#referee-bias-analysis-crowdstorming-dataset",
+    "href": "projects/index.html#referee-bias-analysis-crowdstorming-dataset",
+    "title": "Projects",
+    "section": "",
+    "text": "A statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.\nRead more →"
+  }
+]
