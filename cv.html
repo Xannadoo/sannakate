@@ -108,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./recipes/christmas-cake.html"> 
+    <a class="nav-link" href="./recipes/"> 
 <span class="menu-text">Recipes</span></a>
   </li>  
 </ul>
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><a href="cv.pdf" class="btn btn-primary">Download PDF</a></p>
-<iframe src="cv.pdf" width="100%" height="900px" style="border: 1px solid #ddd; margin-top: 1em;">
+<iframe src="cv.pdf" width="200%" height="900px" style="border: 1px solid #ddd; margin-top: 1em;">
   Your browser doesn't support embedded PDFs. Use the download link above instead.
 </iframe>
 
@@ -226,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Xannadoo\.github\.io\/sannakate\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
