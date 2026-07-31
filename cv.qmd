@@ -2,10 +2,73 @@
 title: "CV"
 ---
 
-[Download PDF](cv.pdf){.btn .btn-primary}
+::: {.cv-header}
 
-```{=html}
-<iframe src="cv.pdf" width="200%" height="900px" style="border: 1px solid #ddd; margin-top: 1em;">
-  Your browser doesn't support embedded PDFs. Use the download link above instead.
-</iframe>
-```
+# Chrisanna Kate Cornish
+
+*Data Scientist | Driven by questions, focused on clarity, fuelled by curiosity (and coffee)*
+
+Find me  here: [linkedin.com/in/chrisanna-kate-cornish](https://www.linkedin.com/in/chrisanna-kate-cornish)
+
+Smørumovre, Copenhagen, Denmark · Permanent Danish residency · Fluent English, Conversational Danish
+
+![](images/Sanna-Profile_bw.jpg){.cv-photo}
+
+:::
+
+## Profile
+
+I have a strong instinct for finding what doesn't add up, in spreadsheets, in model outputs, in chain-of-thought reasoning, and I find it interesting rather than frustrating. My MSc thesis put that instinct to work on DeepSeek R1, and found it would change its answer in response to a hint without ever mentioning the hint in its reasoning. The model wasn't lying exactly, it just wasn't telling the whole story, which felt like familiar territory.
+
+Most of my career, even the parts that don't look like data science on paper, has involved the same question: is this system actually doing what we think it's doing, and what happens to the person it gets wrong about? I'd like to keep asking that question somewhere it can do some good.
+
+I like working on problems that don't have a clean answer yet, and with people who'll tell me honestly when I've got something wrong, and celebrate the things that are right.
+
+## Education
+
+**MSc Data Science** — ITU Copenhagen — 2023 -- 2025
+
+*Selected courses:* Advanced Applied Statistics; Advanced Machine Learning; Advanced Robotics; Foundations of Game AI; Data Wrangling and Visualising
+
+*Research project:* Investigating Comparison Reasoning Skills in an LLM
+
+*Thesis:* [Examining the Faithfulness of DeepSeek R1's Chain-of-Thought Reasoning](https://aclanthology.org/2025.chomps-main.2/)
+Published in the ACL Anthology, IJCNLP-AACL 2025, CHOMPS workshop.
+
+**BSc Data Science** — ITU Copenhagen — 2020 -- 2023
+
+*Thesis:* Carbon Footprint of Machine Learning Competitions with Medical Images
+
+## Key Skills
+
+**Technical:** Python, R, SQL, machine learning, statistical analysis, Git, Docker, Singularity, Linux, HPC/Slurm, data pipelines, data wrangling, model evaluation, visualisation
+
+**Professional:** Teaching, technical communication, stakeholder collaboration, problem-solving, process improvement
+
+## Experience
+
+**Housekeeping & Admin Assistant** — AC Bella Sky, Copenhagen — Sept 2025 -- present
+
+- Approved shifts for payroll, monitored housekeeper efficiency. investigating and reporting discrepancies
+- Inspected rooms to ensure standards were met, giving feedback to housekeepers where needed
+- Undertook housekeeping duties in a very large hotel
+
+**Teaching Assistant — BSc & MSc Data Science** — ITU Copenhagen — Jan 2023 -- Jun 2025
+
+- Supported teaching across machine learning, statistics, large-scale data analysis, data wrangling, and algorithmic fairness
+- Led tutorials, coding sessions, and project supervision for BSc and MSc students
+- Guided model development, evaluation, and debugging using Python, Git, and ML libraries
+- Explained core concepts including overfitting, bias, interpretability, and statistical inference
+
+**Income and Payments Assistant** — East Devon District Council, UK — Nov 2018 -- Aug 2020
+
+- Managed financial data and payment processes across departments, ensuring accuracy and compliance
+- Improved tracking workflows and maintained documentation standards supporting transparency and collaboration
+
+**Admin / Cash Office Manager** — Morrisons, Exeter, UK — Jul 2009 -- Nov 2018
+
+- Led the cash office function in the highest-performing store in the area, which was selected as the pilot site for rollout of a new cash office system
+- Supported system implementation across lower-performing stores during regional rollout, including on-site training and transition support
+- Maintained high levels of accuracy and operational consistency in cash handling, reporting, and compliance
+- Later moved to one of the supported stores as Cash Office / Admin Manager, stabilising processes and improving operational performance
+

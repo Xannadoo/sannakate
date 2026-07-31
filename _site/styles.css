@@ -1,7 +1,28 @@
-body {
-  max-width: 800px;
+/* Widen the article content column and shrink the side margins,
+   so the page uses more of the screen on wide monitors while still
+   staying centered and readable on smaller ones. */
+.page-columns.page-layout-article {
+  grid-template-columns:
+    [screen-start] 1.5em
+    [screen-start-inset] 1fr
+    [page-start page-start-inset body-start-outset body-start] 1.5em
+    [body-content-start] minmax(500px, 1100px)
+    [body-content-end] 1.5em
+    [body-end body-end-outset page-end-inset page-end] 1fr
+    [screen-end-inset] 1.5em
+    [screen-end];
 }
 
 .navbar-title {
   font-weight: 600;
+}
+
+.cv-header h1 {
+  margin-bottom: 0.2em;
+}
+
+.cv-photo {
+  border-radius: 50%;
+  width: 140px;
+  float: right;
 }
