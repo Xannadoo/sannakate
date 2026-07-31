@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sannakate</title>
+<title>Meal Planner – Sannakate</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,23 +29,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8aa1f804df266b3c9ff2be19c6ec56a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8aa1f804df266b3c9ff2be19c6ec56a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Sannakate</span>
     </a>
   </div>
@@ -96,15 +96,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/index.html"> 
+    <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sannakate</h1>
+<h1 class="title">Meal Planner</h1>
 </div>
 
 
@@ -141,20 +141,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="hi-im-sanna" class="level2">
-<h2 class="anchored" data-anchor-id="hi-im-sanna">Hi, I’m Sanna</h2>
-<p>I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.</p>
-<p>My MSc thesis, published in the ACL Anthology, examined whether DeepSeek R1’s chain-of-thought reasoning faithfully reflects its internal process, or whether it’s largely a rationalisation after the fact. My BSc thesis found that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI.</p>
-<p>Whilst studying, I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics; helping students think critically about not just how to build models, but when and whether to. A model trained on biased data propagates that bias; deciding how to handle that should be a conscious choice. We should be making the world better, not accidentally adding to the chaos.</p>
-<p>Before data science I spent over a decade in healthcare, local government, and retail. Those roles gave me a grounded sense of what systems look like from the inside, and who gets left behind when they break.</p>
-<p>I show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends. A lot of my work, in different forms, has been about making sure people have what they need to make real choices; I helped coordinate one of the first community food networks during the COVID-19 lockdown, and volunteered as a peer supporter for new mothers through Sure Start. Noticing people and not walking past is part of how I approach data work too.</p>
-<p>I passed my Danish PD3 exam, have permanent residency, and my kids still say I sound mærkeligt.</p>
-<p>I’m currently looking for data science and research-focused roles in the Copenhagen area.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>I built a meal planning system for my family. It scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety (because despite what my kids might want, we are <em>not</em> eating pasta every night!).</p>
+<p>I wanted to show that I could take a project from idea to implementation,and make something that was useful to me (and maybe others!). I wanted to combine a few different skills: web scraping, LLMs, and building a simple UI so it was accessable to others. In particular, I wanted to see if I could use a local LLM to tag recipes in a way that was useful for meal planning, and to see if I could get it to do that without sending any data to the cloud.</p>
+</section>
+<section id="approach" class="level2">
+<h2 class="anchored" data-anchor-id="approach">Approach</h2>
+<p>I built this with “future me” in mind. Looking out for the part of the system that is small now but could cause a problem later:</p>
 <ul>
-<li><a href="./cv.html">View my CV</a></li>
-<li><a href="./projects/index.html">See my projects</a></li>
+<li>Tuneable config: All weights, thresholds, and site-specific rules (anything I might want to mess around with at 3am when it occurs to me!) live in a config.yaml.</li>
+<li>Data led: My first attempt at calculating ease felt off. Looking at the actual distributions for cooking and prep times showed me why, and the curves were fitted to what was actually there.</li>
+<li>Data cleaning: Actually one of my favourite parts of a project. Getting the scraped data from different sites into a consistent format, no sneaky HTML tags hiding to mess things up later. Formatting well from the start saves fussing and fixing later.</li>
 </ul>
-<p>You can also find me on <a href="https://www.linkedin.com/in/chrisanna-kate-cornish">LinkedIn</a> and <a href="https://github.com/Xannadoo">GitHub</a>.</p>
+<p>There are 2 versions, the first is a fixed version that is publically available, the second is a more flexible version that can be run locally. This version can be customised with recipes, family names and individual ratings for each recipe.</p>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<ul>
+<li>Selenium and BeautifulSoup for scraping</li>
+<li>Ollama running Qwen2.5:7b for tagging</li>
+<li>Streamlit for the UI.</li>
+</ul>
+</section>
+<section id="status" class="level2">
+<h2 class="anchored" data-anchor-id="status">Status</h2>
+<p>Working, but not perfect and I’d like to mess with it further someday.</p>
+<p>Working version of the fixed system: <a href="sannakatemealplanner.streamlit.app">Streamlit App</a></p>
+<p>Cloneable repo with the code and instructions for running it locally: <a href="https://github.com/Xannadoo/web_recipes">GitHub</a></p>
 
 
 </section>

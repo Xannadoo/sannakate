@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Xannadoo.github.io/sannakate/recipes/index.html</loc>
-    <lastmod>2026-07-31T17:45:06.588Z</lastmod>
+    <loc>https://Xannadoo.github.io/sannakate/projects/tefr_glyphs.html</loc>
+    <lastmod>2026-07-31T19:47:59.680Z</lastmod>
   </url>
   <url>
-    <loc>https://Xannadoo.github.io/sannakate/projects/crowdstorming.html</loc>
-    <lastmod>2026-07-31T18:18:59.352Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Xannadoo.github.io/sannakate/cv.html</loc>
-    <lastmod>2026-07-31T18:39:24.392Z</lastmod>
+    <loc>https://Xannadoo.github.io/sannakate/projects/index.html</loc>
+    <lastmod>2026-07-31T19:44:56.255Z</lastmod>
   </url>
   <url>
     <loc>https://Xannadoo.github.io/sannakate/index.html</loc>
     <lastmod>2026-07-31T17:44:43.688Z</lastmod>
   </url>
   <url>
-    <loc>https://Xannadoo.github.io/sannakate/projects/index.html</loc>
-    <lastmod>2026-07-31T17:38:50.256Z</lastmod>
+    <loc>https://Xannadoo.github.io/sannakate/cv.html</loc>
+    <lastmod>2026-07-31T18:39:24.392Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Xannadoo.github.io/sannakate/projects/crowdstorming.html</loc>
+    <lastmod>2026-07-31T19:12:26.663Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Xannadoo.github.io/sannakate/projects/meal_planner.html</loc>
+    <lastmod>2026-07-31T19:27:47.135Z</lastmod>
   </url>
 </urlset>
