@@ -4,15 +4,15 @@ title: "CV"
 
 ::: {.cv-header}
 
+![](images/Sanna-Profile_bw.jpg){.cv-photo}
+
 # Chrisanna Kate Cornish
 
 *Data Scientist | Driven by questions, focused on clarity, fuelled by curiosity (and coffee)*
 
-Find me  here: [linkedin.com/in/chrisanna-kate-cornish](https://www.linkedin.com/in/chrisanna-kate-cornish)
+Find me on [LinkedIn](https://www.linkedin.com/in/chrisanna-kate-cornish)
 
 Smørumovre, Copenhagen, Denmark · Permanent Danish residency · Fluent English, Conversational Danish
-
-![](images/Sanna-Profile_bw.jpg){.cv-photo}
 
 :::
 
