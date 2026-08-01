@@ -27,6 +27,53 @@
   float: right;
 }
 
+.cv-jumpnav {
+  font-size: 0.9em;
+  padding: 0.6em 0;
+  margin-bottom: 1em;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  clear: both;
+}
+
+.cv-jumpnav a {
+  text-decoration: none;
+  color: #1a4d8f;
+}
+
+.cv-entry {
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  margin-bottom: 0.7em;
+}
+
+.cv-entry summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.cv-entry summary::-webkit-details-marker {
+  display: none;
+}
+
+.cv-entry summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.5em;
+  color: #1a4d8f;
+  transition: transform 0.15s ease;
+}
+
+.cv-entry[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.cv-entry ul {
+  margin-top: 0.7em;
+  margin-bottom: 0.2em;
+}
+
 /* Projects page: card grid */
 .project-grid {
   display: grid;

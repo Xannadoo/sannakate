@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./cv.html" aria-current="page"> 
+    <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
@@ -141,15 +141,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="cv-header">
-<p><img src="images/Sanna-Profile_bw.jpg" class="cv-photo img-fluid"></p>
-<section id="chrisanna-kate-cornish" class="level1">
+<section id="chrisanna-kate-cornish" class="level1 cv-header">
 <h1>Chrisanna Kate Cornish</h1>
 <p><em>Data Scientist | Driven by questions, focused on clarity, fuelled by curiosity (and coffee)</em></p>
-<p>Find me on <a href="https://www.linkedin.com/in/chrisanna-kate-cornish">LinkedIn</a></p>
-<p>Smørumovre, Copenhagen, Denmark · Permanent Danish residency · Fluent English, Conversational Danish</p>
+<p><a href="mailto:chrisanna.cornish@outlook.com">chrisanna.cornish@outlook.com</a> · <a href="https://www.linkedin.com/in/chrisanna-kate-cornish">linkedin.com/in/chrisanna-kate-cornish</a></p>
+<p>Smørumovre, Denmark · Permanent Danish residency · Fluent English, Conversational Danish</p>
+<!-- Add a photo by placing a file in images/ and uncommenting the line below -->
+<!-- ![](images/profile.jpg){.cv-photo} -->
 </section>
-</div>
 <div class="cv-jumpnav">
 <p><a href="#profile">Profile</a> · <a href="#education">Education</a> · <a href="#key-skills">Key Skills</a> · <a href="#experience">Experience</a> · <a href="#about-me">About me</a></p>
 </div>
@@ -164,8 +163,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>MSc Data Science</strong> — ITU Copenhagen — 2023 – 2025</p>
 <p><em>Selected courses:</em> Advanced Applied Statistics; Advanced Machine Learning; Advanced Robotics; Foundations of Game AI; Data Wrangling and Visualising</p>
 <p><em>Research project:</em> Investigating Comparison Reasoning Skills in an LLM</p>
-<p><em>Thesis:</em> <a href="https://aclanthology.org/2025.chomps-main.2/">Examining the Faithfulness of DeepSeek R1’s Chain-of-Thought Reasoning</a><br>
-  <small><em>Published in the ACL Anthology, IJCNLP-AACL 2025, CHOMPS workshop</em></small></p>
+<p><em>Thesis:</em> <a href="https://aclanthology.org/2025.chomps-main.2/">Examining the Faithfulness of DeepSeek R1’s Chain-of-Thought Reasoning</a> Published in the ACL Anthology, IJCNLP-AACL 2025, CHOMPS workshop.</p>
 <p><strong>BSc Data Science</strong> — ITU Copenhagen — 2020 – 2023</p>
 <p><em>Thesis:</em> Carbon Footprint of Machine Learning Competitions with Medical Images</p>
 </section>
@@ -179,9 +177,9 @@ ul.task-list li input[type="checkbox"] {
 <details class="cv-entry">
   <summary><strong>Housekeeping &amp; Admin Assistant</strong> — AC Bella Sky, Copenhagen — Sept 2025 – present</summary>
   <ul>
-    <li>Approved shifts for payroll, monitored housekeeper efficiency. investigating and reporting discrepancies</li>
-    <li>Inspected rooms to ensure standards were met, giving feedback to housekeepers where needed</li>
-    <li>Undertook housekeeping duties in a very large hotel</li>
+    <li>Managed payroll and operational data supporting hotel operations</li>
+    <li>Monitored performance metrics and investigated discrepancies</li>
+    <li>Coordinated across operational teams to ensure data accuracy and process consistency</li>
   </ul>
 </details>
 
@@ -212,23 +210,16 @@ ul.task-list li input[type="checkbox"] {
     <li>Later moved to one of the supported stores as Cash Office / Admin Manager, stabilising processes and improving operational performance</li>
   </ul>
 </details>
-
-<details class="cv-entry">
-  <summary><strong>Trainee Nurse</strong> — Royal Devon and Exeter Hospital, UK — Sep 2006 – Jul 2009</summary>
-  <ul>
-    <li>Delivered patient care and maintained accurate clinical records in a regulated healthcare environment</li>
-    <li>Worked within strict governance, safety, confidentiality, and multidisciplinary care frameworks</li>
-  </ul>
-</details>
 </section>
 <section id="about-me" class="level2">
 <h2 class="anchored" data-anchor-id="about-me">About me</h2>
 <ul>
-<li>Moved to Denmark in mid-2020 and passed PD3 in 2024. My kids say I still sound </li>
-<li>Student Volunteer for ALIFE Conference 2024</li>
-<li>Maths was my favourite subject at school, something I still get told was weird</li>
-<li>Enjoy building things, from Python projects to clothing and bread</li>
-<li>Awarded “coffee drinker of the semester” in 2024. I still have the mug</li>
+<li>Once covered a cash office floor in bubble wrap. We got all the work done and we still talk about that day 15 years later.</li>
+<li>Trained as a breastfeeding peer supporter, mostly telling new parents that whatever their baby was doing was probably normal</li>
+<li>Helped build a cob roundhouse and learnt to thatch the roof. I nearly fell off, my jeans did not survive and I then found out I was 20 weeks pregnant</li>
+<li>Bayes theorem is one of my favourite things to explain. I love the moment someone’s first instinct turns out wrong and they have to actually think</li>
+<li>My daughters were guinea pigs for my TA explanations. If it clicked for a 9 and 12 year old, it would click for a room of adults</li>
+<li>Star Trek nerd. TNG vs DS9 is one of my favourite comparisons. Voyager is my actual favourite, and I will defend that choice</li>
 </ul>
 
 
@@ -308,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/sannakate\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
