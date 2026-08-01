@@ -7,7 +7,7 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: About
       - href: cv.qmd
         text: CV
       - href: projects/index.qmd
@@ -15,7 +15,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, custom.scss]
     css: styles.css
     toc: false
     page-layout: article

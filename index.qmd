@@ -1,8 +1,7 @@
 ---
-title: "Sannakate"
+title: "Hi, I'm Chrisanna 💗"
 ---
-
-## Hi, I'm Chrisanna, aka Sanna.
+![](images/FairySanna2.jpg){.title-page-photo}
 
 I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.
  

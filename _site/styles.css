@@ -13,6 +13,13 @@
     [screen-end];
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+
+body {
+  font-family: 'Ysabeau Office', sans-serif;
+}
+
 .navbar-title {
   font-weight: 600;
 }
@@ -24,7 +31,16 @@
 .cv-photo {
   border-radius: 50%;
   width: 140px;
-  float: right;
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+}
+
+.title-page-photo {
+  border-radius: 50%;
+  width: 140px;
+  float: left;
+  margin-right: 0.5em;
 }
 
 .cv-jumpnav {

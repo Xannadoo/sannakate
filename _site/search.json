@@ -72,42 +72,49 @@
   {
     "objectID": "cv.html",
     "href": "cv.html",
-    "title": "CV",
+    "title": "Chrisanna Kate Cornish",
     "section": "",
-    "text": "Data Scientist | Driven by questions, focused on clarity, fuelled by curiosity (and coffee)\nFind me on LinkedIn\nSmørumovre, Copenhagen, Denmark · Permanent Danish residency · Fluent English, Conversational Danish"
+    "text": "Data Scientist: driven by questions, focused on clarity, fuelled by curiosity (and coffee)\n\nFind me on LinkedIn\nPermanent Danish residency\nFluent English, Conversational Danish"
   },
   {
     "objectID": "cv.html#profile",
     "href": "cv.html#profile",
-    "title": "CV",
+    "title": "Chrisanna Kate Cornish",
     "section": "Profile",
     "text": "Profile\nI have a strong instinct for finding what doesn’t add up, in spreadsheets, in model outputs, in chain-of-thought reasoning, and I find it interesting rather than frustrating. My MSc thesis put that instinct to work on DeepSeek R1, and found it would change its answer in response to a hint without ever mentioning the hint in its reasoning. The model wasn’t lying exactly, it just wasn’t telling the whole story, which felt like familiar territory.\nMost of my career, even the parts that don’t look like data science on paper, has involved the same question: is this system actually doing what we think it’s doing, and what happens to the person it gets wrong about? I’d like to keep asking that question somewhere it can do some good.\nI work best on problems that don’t have a clean answer yet, with people who’ll tell me honestly when I’ve got something wrong. I’d rather be somewhere people disagree productively and push things forwards, than somewhere everyone nods along. I’m told I ask a lot of questions. I’d call it thoroughness."
   },
   {
     "objectID": "cv.html#education",
     "href": "cv.html#education",
-    "title": "CV",
+    "title": "Chrisanna Kate Cornish",
     "section": "Education",
     "text": "Education\nMSc Data Science — ITU Copenhagen — 2023 – 2025\nSelected courses: Advanced Applied Statistics; Advanced Machine Learning; Advanced Robotics; Foundations of Game AI; Data Wrangling and Visualising\nResearch project: Investigating Comparison Reasoning Skills in an LLM\nThesis: Examining the Faithfulness of DeepSeek R1’s Chain-of-Thought Reasoning\n  Published in the ACL Anthology, IJCNLP-AACL 2025, CHOMPS workshop\nBSc Data Science — ITU Copenhagen — 2020 – 2023\nThesis: Carbon Footprint of Machine Learning Competitions with Medical Images"
   },
   {
     "objectID": "cv.html#key-skills",
     "href": "cv.html#key-skills",
-    "title": "CV",
+    "title": "Chrisanna Kate Cornish",
     "section": "Key Skills",
     "text": "Key Skills\nTechnical: Python, R, SQL, machine learning, statistical analysis, Git, Docker, Singularity, Linux, HPC/Slurm, data pipelines, data wrangling, model evaluation, visualisation\nProfessional: Teaching, technical communication, stakeholder collaboration, problem-solving, process improvement"
   },
   {
     "objectID": "cv.html#experience",
     "href": "cv.html#experience",
-    "title": "CV",
+    "title": "Chrisanna Kate Cornish",
     "section": "Experience",
     "text": "Experience\n\n  Housekeeping & Admin Assistant — AC Bella Sky, Copenhagen — Sept 2025 – present\n  \n    Approved shifts for payroll, monitored housekeeper efficiency. investigating and reporting discrepancies\n    Inspected rooms to ensure standards were met, giving feedback to housekeepers where needed\n    Undertook housekeeping duties in a very large hotel\n  \n\n\n\n  Teaching Assistant — BSc & MSc Data Science — ITU Copenhagen — Jan 2023 – Jun 2025\n  \n    Supported teaching across machine learning, statistics, large-scale data analysis, data wrangling, and algorithmic fairness\n    Led tutorials, coding sessions, and project supervision for BSc and MSc students\n    Guided model development, evaluation, and debugging using Python, Git, and ML libraries\n    Explained core concepts including overfitting, bias, interpretability, and statistical inference\n  \n\n\n\n  Income and Payments Assistant — East Devon District Council, UK — Nov 2018 – Aug 2020\n  \n    Managed financial data and payment processes across departments, ensuring accuracy and compliance\n    Improved tracking workflows and maintained documentation standards supporting transparency and collaboration\n  \n\n\n\n  Admin / Cash Office Manager — Morrisons, Exeter, UK — Jul 2009 – Nov 2018\n  \n    Led the cash office function in the highest-performing store in the area, which was selected as the pilot site for rollout of a new cash office system\n    Supported system implementation across lower-performing stores during regional rollout, including on-site training and transition support\n    Maintained high levels of accuracy and operational consistency in cash handling, reporting, and compliance\n    Later moved to one of the supported stores as Cash Office / Admin Manager, stabilising processes and improving operational performance\n  \n\n\n\n  Trainee Nurse — Royal Devon and Exeter Hospital, UK — Sep 2006 – Jul 2009\n  \n    Delivered patient care and maintained accurate clinical records in a regulated healthcare environment\n    Worked within strict governance, safety, confidentiality, and multidisciplinary care frameworks"
   },
   {
+    "objectID": "cv.html#about-me",
+    "href": "cv.html#about-me",
+    "title": "Chrisanna Kate Cornish",
+    "section": "About me",
+    "text": "About me\n\nMoved to Denmark in mid-2020 and passed PD3 in 2024. My kids say I still sound \nStudent Volunteer for ALIFE Conference 2024\nMaths was my favourite subject at school, something I still get told was weird\nEnjoy building things, from Python projects to clothing and bread\nAwarded “coffee drinker of the semester” in 2024. I still have the mug"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Sannakate",
+    "title": "Hi, I’m Chrisanna 💗",
     "section": "",
     "text": "I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.\nMy MSc thesis, published in the ACL Anthology, examined whether DeepSeek R1’s chain-of-thought reasoning faithfully reflects its internal process, or whether it’s largely a rationalisation after the fact. My BSc thesis found that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI.\nWhilst studying, I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics; helping students think critically about not just how to build models, but when and whether to. A model trained on biased data propagates that bias; deciding how to handle that should be a conscious choice. We should be making the world better, not accidentally adding to the chaos.\nBefore data science I spent over a decade in healthcare, local government, and retail. Those roles gave me a grounded sense of what systems look like from the inside, and who gets left behind when they break.\nI show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends. A lot of my work, in different forms, has been about making sure people have what they need to make real choices; I helped coordinate one of the first community food networks during the COVID-19 lockdown, and volunteered as a peer supporter for new mothers through Sure Start. Noticing people and not walking past is part of how I approach data work too.\nI passed my Danish PD3 exam, have permanent residency, and my kids still say I sound mærkeligt.\nI’m currently looking for data science and research-focused roles in the Copenhagen area.\n\nView my CV\nSee my projects\n\nYou can also find me on LinkedIn and GitHub."
   },
@@ -159,54 +166,5 @@
     "title": "Meal Planner",
     "section": "Status",
     "text": "Status\nWorking, but not perfect and I’d like to mess with it further someday.\nWorking version of the fixed system: Streamlit App\nCloneable repo with the code and instructions for running it locally: GitHub"
-  },
-  {
-    "objectID": "cv2.html",
-    "href": "cv2.html",
-    "title": "CV",
-    "section": "",
-    "text": "Data Scientist | Driven by questions, focused on clarity, fuelled by curiosity (and coffee)\nchrisanna.cornish@outlook.com · linkedin.com/in/chrisanna-kate-cornish\nSmørumovre, Denmark · Permanent Danish residency · Fluent English, Conversational Danish"
-  },
-  {
-    "objectID": "cv2.html#profile",
-    "href": "cv2.html#profile",
-    "title": "CV",
-    "section": "Profile",
-    "text": "Profile\nI have a strong instinct for finding what doesn’t add up, in spreadsheets, in model outputs, in chain-of-thought reasoning, and I find it interesting rather than frustrating. My MSc thesis put that instinct to work on DeepSeek R1, and found it would change its answer in response to a hint without ever mentioning the hint in its reasoning. The model wasn’t lying exactly, it just wasn’t telling the whole story, which felt like familiar territory.\nMost of my career, even the parts that don’t look like data science on paper, has involved the same question: is this system actually doing what we think it’s doing, and what happens to the person it gets wrong about? I’d like to keep asking that question somewhere it can do some good.\nI work best on problems that don’t have a clean answer yet, with people who’ll tell me honestly when I’ve got something wrong. I’d rather be somewhere people disagree productively and push things forwards, than somewhere everyone nods along. I’m told I ask a lot of questions. I’d call it thoroughness."
-  },
-  {
-    "objectID": "cv2.html#education",
-    "href": "cv2.html#education",
-    "title": "CV",
-    "section": "Education",
-    "text": "Education\nMSc Data Science — ITU Copenhagen — 2023 – 2025\nSelected courses: Advanced Applied Statistics; Advanced Machine Learning; Advanced Robotics; Foundations of Game AI; Data Wrangling and Visualising\nResearch project: Investigating Comparison Reasoning Skills in an LLM\nThesis: Examining the Faithfulness of DeepSeek R1’s Chain-of-Thought Reasoning Published in the ACL Anthology, IJCNLP-AACL 2025, CHOMPS workshop.\nBSc Data Science — ITU Copenhagen — 2020 – 2023\nThesis: Carbon Footprint of Machine Learning Competitions with Medical Images"
-  },
-  {
-    "objectID": "cv2.html#key-skills",
-    "href": "cv2.html#key-skills",
-    "title": "CV",
-    "section": "Key Skills",
-    "text": "Key Skills\nTechnical: Python, R, SQL, machine learning, statistical analysis, Git, Docker, Singularity, Linux, HPC/Slurm, data pipelines, data wrangling, model evaluation, visualisation\nProfessional: Teaching, technical communication, stakeholder collaboration, problem-solving, process improvement"
-  },
-  {
-    "objectID": "cv2.html#experience",
-    "href": "cv2.html#experience",
-    "title": "CV",
-    "section": "Experience",
-    "text": "Experience\n\n  Housekeeping & Admin Assistant — AC Bella Sky, Copenhagen — Sept 2025 – present\n  \n    Managed payroll and operational data supporting hotel operations\n    Monitored performance metrics and investigated discrepancies\n    Coordinated across operational teams to ensure data accuracy and process consistency\n  \n\n\n\n  Teaching Assistant — BSc & MSc Data Science — ITU Copenhagen — Jan 2023 – Jun 2025\n  \n    Supported teaching across machine learning, statistics, large-scale data analysis, data wrangling, and algorithmic fairness\n    Led tutorials, coding sessions, and project supervision for BSc and MSc students\n    Guided model development, evaluation, and debugging using Python, Git, and ML libraries\n    Explained core concepts including overfitting, bias, interpretability, and statistical inference\n  \n\n\n\n  Income and Payments Assistant — East Devon District Council, UK — Nov 2018 – Aug 2020\n  \n    Managed financial data and payment processes across departments, ensuring accuracy and compliance\n    Improved tracking workflows and maintained documentation standards supporting transparency and collaboration\n  \n\n\n\n  Admin / Cash Office Manager — Morrisons, Exeter, UK — Jul 2009 – Nov 2018\n  \n    Led the cash office function in the highest-performing store in the area, which was selected as the pilot site for rollout of a new cash office system\n    Supported system implementation across lower-performing stores during regional rollout, including on-site training and transition support\n    Maintained high levels of accuracy and operational consistency in cash handling, reporting, and compliance\n    Later moved to one of the supported stores as Cash Office / Admin Manager, stabilising processes and improving operational performance"
-  },
-  {
-    "objectID": "cv2.html#about-me",
-    "href": "cv2.html#about-me",
-    "title": "CV",
-    "section": "About me",
-    "text": "About me\n\nOnce covered a cash office floor in bubble wrap. We got all the work done and we still talk about that day 15 years later.\nTrained as a breastfeeding peer supporter, mostly telling new parents that whatever their baby was doing was probably normal\nHelped build a cob roundhouse and learnt to thatch the roof. I nearly fell off, my jeans did not survive and I then found out I was 20 weeks pregnant\nBayes theorem is one of my favourite things to explain. I love the moment someone’s first instinct turns out wrong and they have to actually think\nMy daughters were guinea pigs for my TA explanations. If it clicked for a 9 and 12 year old, it would click for a room of adults\nStar Trek nerd. TNG vs DS9 is one of my favourite comparisons. Voyager is my actual favourite, and I will defend that choice"
-  },
-  {
-    "objectID": "cv.html#about-me",
-    "href": "cv.html#about-me",
-    "title": "CV",
-    "section": "About me",
-    "text": "About me\n\nMoved to Denmark in mid-2020 and passed PD3 in 2024. My kids say I still sound \nStudent Volunteer for ALIFE Conference 2024\nMaths was my favourite subject at school, something I still get told was weird\nEnjoy building things, from Python projects to clothing and bread\nAwarded “coffee drinker of the semester” in 2024. I still have the mug"
   }
 ]
