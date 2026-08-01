@@ -2,7 +2,7 @@
 title: "Sannakate"
 ---
 
-## Hi, I'm Sanna
+## Hi, I'm Chrisanna, aka Sanna.
 
 I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.
  
@@ -22,3 +22,4 @@ I'm currently looking for data science and research-focused roles in the Copenha
 - [See my projects](projects/index.qmd)
 
 You can also find me on [LinkedIn](https://www.linkedin.com/in/chrisanna-kate-cornish) and [GitHub](https://github.com/Xannadoo).
+

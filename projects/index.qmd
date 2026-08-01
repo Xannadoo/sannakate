@@ -2,30 +2,72 @@
 title: "Projects"
 ---
 
-## Meal Planner, July 2026, complete
+```{=html}
+<div class="project-grid">
 
-A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.
+  <div class="project-card">
+    <h3>Chain-of-Thought Faithfulness in DeepSeek R1</h3>
+    <div class="badge-row">
+      <span class="badge badge-type-research">Research &amp; Publication</span>
+      <span class="badge badge-status-complete">Complete</span>
+    </div>
+    <div class="skill-tags">Python · LLM evaluation · Prompt design · Statistical analysis</div>
+    <p>MSc thesis examining whether DeepSeek R1's stated reasoning actually reflects the factors driving its answers.</p>
+    <details>
+      <summary>Details</summary>
+      <p>Found that the model would change its final answer in response to a hint embedded in the prompt, without ever mentioning that hint anywhere in its chain-of-thought. Published in the ACL Anthology as part of IJCNLP-AACL 2025, CHOMPS workshop.</p>
+      <a href="https://aclanthology.org/2025.chomps-main.2/" target="_blank">Read the paper →</a>
+    </details>
+  </div>
 
-[Read more →](meal_planner.qmd)
+  <div class="project-card">
+    <h3>Meal Planner</h3>
+    <div class="badge-row">
+      <span class="badge badge-type-personal">Personal Project</span>
+      <span class="badge badge-status-complete">Completed</span>
+    </div>
+    <div class="skill-tags">LLM, web scraping, data processing, UI/UX</div>
+    <p>A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.</p>
+    <details>
+      <summary>Details</summary>
+      <p>Solving a niggle, 500 recipes were scraped from the web, processed, tagged using a locally-hosted LLM, and a weekly plan can then be generated with regards to season, effort, diet requirements, etc. A local version is also available that allows users to customise for the size of their household, and rate recipes (per individual).</p>
+      <a href="meal_planner.qmd">Read more here</a>
+    </details>
+  </div>
 
-## Tefr Glyphs, July 2026, complete
 
-A project that took the enchanters codex from Tefr RPG, and allows you to search for possible spells from known glyphs. 
+  <div class="project-card">
+    <h3>Tefr Glyphs Combinations Checker</h3>
+    <div class="badge-row">
+      <span class="badge badge-type-personal">Personal Project</span>
+      <span class="badge badge-status-complete">Completed</span>
+    </div>
+    <div class="skill-tags">NLP, UI/UX</div>
+    <p>A project that took the enchanters codex from Tefr RPG, and allows you to search for possible spells from known glyphs.</p>
+    <details>
+      <summary>Details</summary>
+      <p>Tefr's enchanting system uses a glyph-based approach. Characters learn glyphs, and combine them to create spells. With over 800 known spells, this is a lot to remember so this project helps users find valid combinations.</p>
+      <a href="tefr_glyphs.qmd">Read more here</a>
+    </details>
+  </div>
 
-[Read more →](tefr_glyphs.qmd)
+    <div class="project-card">
+    <h3>Referee Bias Analysis</h3>
+    <div class="badge-row">
+      <span class="badge badge-type-personal">Personal Project</span>
+      <span class="badge badge-status-progress">In progress</span>
+    </div>
+    <div class="skill-tags">R · GLM/GLMM · Statistical modelling</div>
+    <p>Examining whether football referees issue red cards at different rates depending on players' skin tone, using the Crowdstorming dataset.</p>
+    <details>
+      <summary>Details</summary>
+      <p>Built three increasingly complex GLM/GLMM models to test whether the effect held up as model complexity increased. Used as a refresher project for R after several years working mainly in Python. Next step is extending the analysis to yellow cards as an outcome variable.</p>
+      <a href="crowdstorming.qmd">Read more here</a>
+    </details>
+  </div>
+  <!-- Copy one of the blocks above for each new project. Swap the badge classes:
+       badge-type-research or badge-type-personal
+       badge-status-complete or badge-status-progress -->
 
-## Referee Bias Analysis (Crowdstorming Dataset) June 2026 ongoing
-
-A statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.
-
-[Read more →](crowdstorming.qmd)
-
-<!-- Add another project block here as you build more, same pattern:
-
-## Project Name
-
-Brief one or two sentence description.
-
-[Read more →](project-slug.qmd)
-
--->
+</div>
+```

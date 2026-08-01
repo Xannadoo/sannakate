@@ -1,24 +1,73 @@
 [
   {
-    "objectID": "recipes/index.html",
-    "href": "recipes/index.html",
-    "title": "Recipes",
+    "objectID": "projects/tefr_glyphs.html",
+    "href": "projects/tefr_glyphs.html",
+    "title": "Tefr Glyphs",
     "section": "",
-    "text": "Recipes and blog posts from the old sannakate website."
+    "text": "Tefr’s enchanting system is glyph-based, where a character learns glyphs, and then whatever spells they can ‘spell’ with the glyphs they know. There are over 800 spells, so memorising them all is a challenge to both scenerio writers and players (although few players would ever know so many).\nOn the tech side, the codex pdf presented a challenge as the layout is artistic rather than being an easily parsable list of spells. The spells were extracted from the pdf, cleaned, and then stored in a database for searching."
   },
   {
-    "objectID": "projects/crowdstorming.html",
-    "href": "projects/crowdstorming.html",
-    "title": "Referee Bias Analysis",
+    "objectID": "projects/tefr_glyphs.html#overview",
+    "href": "projects/tefr_glyphs.html#overview",
+    "title": "Tefr Glyphs",
     "section": "",
-    "text": "A personal statistical analysis using the Crowdstorming dataset (Silberzahn et al., 2018) to examine whether referees issue red cards at different rates depending on players’ skin tone.\nThe main goal was to refresh R skills after working mainly in Python for the last few years."
+    "text": "Tefr’s enchanting system is glyph-based, where a character learns glyphs, and then whatever spells they can ‘spell’ with the glyphs they know. There are over 800 spells, so memorising them all is a challenge to both scenerio writers and players (although few players would ever know so many).\nOn the tech side, the codex pdf presented a challenge as the layout is artistic rather than being an easily parsable list of spells. The spells were extracted from the pdf, cleaned, and then stored in a database for searching."
   },
   {
-    "objectID": "projects/crowdstorming.html#referee-bias-analysis-crowdstorming-dataset",
-    "href": "projects/crowdstorming.html#referee-bias-analysis-crowdstorming-dataset",
+    "objectID": "projects/tefr_glyphs.html#approach",
+    "href": "projects/tefr_glyphs.html#approach",
+    "title": "Tefr Glyphs",
+    "section": "Approach",
+    "text": "Approach\n\nSpells\nThe spells were scraped from the Enchanter’s Codex, beta 1.7, and then cleaned and processed before being extracted. It is believed that there should be 815 spells, but only 811 were recovered. If errors are found, please let me know so this can be improved!\n\n\nGlyph notes\nSome glyphs are learned together and the app selects them as such:\n\nEvu and Sen\nTira, Ekat, and Worav\n\nSelecting one of those glyphs selects the whole learning group, but the spells themselves still list the individual glyphs separately."
+  },
+  {
+    "objectID": "projects/tefr_glyphs.html#status",
+    "href": "projects/tefr_glyphs.html#status",
+    "title": "Tefr Glyphs",
+    "section": "Status",
+    "text": "Status\nComplete: Streamlit App or on Tefr.com"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "A statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.\nRead more →"
+    "text": "Chain-of-Thought Faithfulness in DeepSeek R1\n    \n      Research & Publication\n      Complete\n    \n    Python · LLM evaluation · Prompt design · Statistical analysis\n    MSc thesis examining whether DeepSeek R1's stated reasoning actually reflects the factors driving its answers.\n    \n      Details\n      Found that the model would change its final answer in response to a hint embedded in the prompt, without ever mentioning that hint anywhere in its chain-of-thought. Published in the ACL Anthology as part of IJCNLP-AACL 2025, CHOMPS workshop.\n      Read the paper →\n    \n  \n\n  \n    Meal Planner\n    \n      Personal Project\n      Completed\n    \n    LLM, web scraping, data processing, UI/UX\n    A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.\n    \n      Details\n      Solving a niggle, 500 recipes were scraped from the web, processed, tagged using a locally-hosted LLM, and a weekly plan can then be generated with regards to season, effort, diet requirements, etc. A local version is also available that allows users to customise for the size of their household, and rate recipes (per individual).\n      Read more here\n    \n  \n\n\n  \n    Tefr Glyphs Combinations Checker\n    \n      Personal Project\n      Completed\n    \n    NLP, UI/UX\n    A project that took the enchanters codex from Tefr RPG, and allows you to search for possible spells from known glyphs.\n    \n      Details\n      Tefr's enchanting system uses a glyph-based approach. Characters learn glyphs, and combine them to create spells. With over 800 known spells, this is a lot to remember so this project helps users find valid combinations.\n      Read more here\n    \n  \n\n    \n    Referee Bias Analysis\n    \n      Personal Project\n      In progress\n    \n    R · GLM/GLMM · Statistical modelling\n    Examining whether football referees issue red cards at different rates depending on players' skin tone, using the Crowdstorming dataset.\n    \n      Details\n      Built three increasingly complex GLM/GLMM models to test whether the effect held up as model complexity increased. Used as a refresher project for R after several years working mainly in Python. Next step is extending the analysis to yellow cards as an outcome variable.\n      Read more here"
+  },
+  {
+    "objectID": "projects/index.html#meal-planner-july-2026-complete",
+    "href": "projects/index.html#meal-planner-july-2026-complete",
+    "title": "Projects",
+    "section": "",
+    "text": "A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.\nRead more →"
+  },
+  {
+    "objectID": "projects/index.html#tefr-glyphs-july-2026-complete",
+    "href": "projects/index.html#tefr-glyphs-july-2026-complete",
+    "title": "Projects",
+    "section": "Tefr Glyphs, July 2026, complete",
+    "text": "Tefr Glyphs, July 2026, complete\nA project that took the enchanters codex from Tefr RPG, and allows you to search for possible spells from known glyphs.\nRead more →"
+  },
+  {
+    "objectID": "projects/index.html#referee-bias-analysis-crowdstorming-dataset-june-2026-ongoing",
+    "href": "projects/index.html#referee-bias-analysis-crowdstorming-dataset-june-2026-ongoing",
+    "title": "Projects",
+    "section": "Referee Bias Analysis (Crowdstorming Dataset) June 2026 ongoing",
+    "text": "Referee Bias Analysis (Crowdstorming Dataset) June 2026 ongoing\nA statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.\nRead more →"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sannakate",
+    "section": "",
+    "text": "I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.\nMy MSc thesis, published in the ACL Anthology, examined whether DeepSeek R1’s chain-of-thought reasoning faithfully reflects its internal process, or whether it’s largely a rationalisation after the fact. My BSc thesis found that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI.\nWhilst studying, I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics; helping students think critically about not just how to build models, but when and whether to. A model trained on biased data propagates that bias; deciding how to handle that should be a conscious choice. We should be making the world better, not accidentally adding to the chaos.\nBefore data science I spent over a decade in healthcare, local government, and retail. Those roles gave me a grounded sense of what systems look like from the inside, and who gets left behind when they break.\nI show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends. A lot of my work, in different forms, has been about making sure people have what they need to make real choices; I helped coordinate one of the first community food networks during the COVID-19 lockdown, and volunteered as a peer supporter for new mothers through Sure Start. Noticing people and not walking past is part of how I approach data work too.\nI passed my Danish PD3 exam, have permanent residency, and my kids still say I sound mærkeligt.\nI’m currently looking for data science and research-focused roles in the Copenhagen area.\n\nView my CV\nSee my projects\n\nYou can also find me on LinkedIn and GitHub."
+  },
+  {
+    "objectID": "index.html#hi-im-sanna",
+    "href": "index.html#hi-im-sanna",
+    "title": "Sannakate",
+    "section": "",
+    "text": "I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.\nMy MSc thesis, published in the ACL Anthology, examined whether DeepSeek R1’s chain-of-thought reasoning faithfully reflects its internal process, or whether it’s largely a rationalisation after the fact. My BSc thesis found that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI.\nWhilst studying, I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics; helping students think critically about not just how to build models, but when and whether to. A model trained on biased data propagates that bias; deciding how to handle that should be a conscious choice. We should be making the world better, not accidentally adding to the chaos.\nBefore data science I spent over a decade in healthcare, local government, and retail. Those roles gave me a grounded sense of what systems look like from the inside, and who gets left behind when they break.\nI show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends. A lot of my work, in different forms, has been about making sure people have what they need to make real choices; I helped coordinate one of the first community food networks during the COVID-19 lockdown, and volunteered as a peer supporter for new mothers through Sure Start. Noticing people and not walking past is part of how I approach data work too.\nI passed my Danish PD3 exam, have permanent residency, and my kids still say I sound mærkeligt.\nI’m currently looking for data science and research-focused roles in the Copenhagen area.\n\nView my CV\nSee my projects\n\nYou can also find me on LinkedIn and GitHub."
   },
   {
     "objectID": "cv.html",
@@ -56,32 +105,11 @@
     "text": "Experience\nHousekeeping & Admin Assistant — AC Bella Sky, Copenhagen — Sept 2025 – present\n\nApproved shifts for payroll, monitored housekeeper efficiency. investigating and reporting discrepancies\nInspected rooms to ensure standards were met, giving feedback to housekeepers where needed\nUndertook housekeeping duties in a very large hotel\n\nTeaching Assistant — BSc & MSc Data Science — ITU Copenhagen — Jan 2023 – Jun 2025\n\nSupported teaching across machine learning, statistics, large-scale data analysis, data wrangling, and algorithmic fairness\nLed tutorials, coding sessions, and project supervision for BSc and MSc students\nGuided model development, evaluation, and debugging using Python, Git, and ML libraries\nExplained core concepts including overfitting, bias, interpretability, and statistical inference\n\nIncome and Payments Assistant — East Devon District Council, UK — Nov 2018 – Aug 2020\n\nManaged financial data and payment processes across departments, ensuring accuracy and compliance\nImproved tracking workflows and maintained documentation standards supporting transparency and collaboration\n\nAdmin / Cash Office Manager — Morrisons, Exeter, UK — Jul 2009 – Nov 2018\n\nLed the cash office function in the highest-performing store in the area, which was selected as the pilot site for rollout of a new cash office system\nSupported system implementation across lower-performing stores during regional rollout, including on-site training and transition support\nMaintained high levels of accuracy and operational consistency in cash handling, reporting, and compliance\nLater moved to one of the supported stores as Cash Office / Admin Manager, stabilising processes and improving operational performance"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sannakate",
+    "objectID": "projects/crowdstorming.html",
+    "href": "projects/crowdstorming.html",
+    "title": "Referee Bias Analysis",
     "section": "",
-    "text": "I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.\nMy MSc thesis, published in the ACL Anthology, examined whether DeepSeek R1’s chain-of-thought reasoning faithfully reflects its internal process, or whether it’s largely a rationalisation after the fact. My BSc thesis found that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI.\nWhilst studying, I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics; helping students think critically about not just how to build models, but when and whether to. A model trained on biased data propagates that bias; deciding how to handle that should be a conscious choice. We should be making the world better, not accidentally adding to the chaos.\nBefore data science I spent over a decade in healthcare, local government, and retail. Those roles gave me a grounded sense of what systems look like from the inside, and who gets left behind when they break.\nI show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends. A lot of my work, in different forms, has been about making sure people have what they need to make real choices; I helped coordinate one of the first community food networks during the COVID-19 lockdown, and volunteered as a peer supporter for new mothers through Sure Start. Noticing people and not walking past is part of how I approach data work too.\nI passed my Danish PD3 exam, have permanent residency, and my kids still say I sound mærkeligt.\nI’m currently looking for data science and research-focused roles in the Copenhagen area.\n\nView my CV\nSee my projects\n\nYou can also find me on LinkedIn and GitHub."
-  },
-  {
-    "objectID": "index.html#hi-im-sanna",
-    "href": "index.html#hi-im-sanna",
-    "title": "Sannakate",
-    "section": "",
-    "text": "I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.\nMy MSc thesis, published in the ACL Anthology, examined whether DeepSeek R1’s chain-of-thought reasoning faithfully reflects its internal process, or whether it’s largely a rationalisation after the fact. My BSc thesis found that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI.\nWhilst studying, I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics; helping students think critically about not just how to build models, but when and whether to. A model trained on biased data propagates that bias; deciding how to handle that should be a conscious choice. We should be making the world better, not accidentally adding to the chaos.\nBefore data science I spent over a decade in healthcare, local government, and retail. Those roles gave me a grounded sense of what systems look like from the inside, and who gets left behind when they break.\nI show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends. A lot of my work, in different forms, has been about making sure people have what they need to make real choices; I helped coordinate one of the first community food networks during the COVID-19 lockdown, and volunteered as a peer supporter for new mothers through Sure Start. Noticing people and not walking past is part of how I approach data work too.\nI passed my Danish PD3 exam, have permanent residency, and my kids still say I sound mærkeligt.\nI’m currently looking for data science and research-focused roles in the Copenhagen area.\n\nView my CV\nSee my projects\n\nYou can also find me on LinkedIn and GitHub."
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.\nRead more →"
-  },
-  {
-    "objectID": "projects/index.html#referee-bias-analysis-crowdstorming-dataset",
-    "href": "projects/index.html#referee-bias-analysis-crowdstorming-dataset",
-    "title": "Projects",
-    "section": "Referee Bias Analysis (Crowdstorming Dataset)",
-    "text": "Referee Bias Analysis (Crowdstorming Dataset)\nA statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.\nRead more →"
+    "text": "A personal statistical analysis using the Crowdstorming dataset (Silberzahn et al., 2018) to examine whether referees issue red cards at different rates depending on players’ skin tone.\nThe main goal was to refresh R skills after working mainly in Python for the last few years."
   },
   {
     "objectID": "projects/crowdstorming.html#overview",
@@ -110,13 +138,6 @@
     "title": "Referee Bias Analysis",
     "section": "Status",
     "text": "Status\nWrite-up in progress. A next step is extending the analysis to yellow cards as an additional outcome variable."
-  },
-  {
-    "objectID": "projects/index.html#meal-planner",
-    "href": "projects/index.html#meal-planner",
-    "title": "Projects",
-    "section": "",
-    "text": "A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.\nRead more →"
   },
   {
     "objectID": "projects/meal_planner.html",
@@ -154,52 +175,24 @@
     "text": "Status\nWorking, but not perfect and I’d like to mess with it further someday.\nWorking version of the fixed system: Streamlit App\nCloneable repo with the code and instructions for running it locally: GitHub"
   },
   {
-    "objectID": "projects/index.html#meal-planner-july-2026-complete",
-    "href": "projects/index.html#meal-planner-july-2026-complete",
+    "objectID": "index.html#hi-im-chrisanna",
+    "href": "index.html#hi-im-chrisanna",
+    "title": "Sannakate",
+    "section": "",
+    "text": "I am also known as Sanna, Sannakate, and Xannadoo.\nI care about whether the systems we build actually do what we think they do, and whether we should be building them at all.\nMy MSc thesis, published in the ACL Anthology, examined whether DeepSeek R1’s chain-of-thought reasoning faithfully reflects its internal process, or whether it’s largely a rationalisation after the fact. My BSc thesis found that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI.\nWhilst studying, I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics; helping students think critically about not just how to build models, but when and whether to. A model trained on biased data propagates that bias; deciding how to handle that should be a conscious choice. We should be making the world better, not accidentally adding to the chaos.\nBefore data science I spent over a decade in healthcare, local government, and retail. Those roles gave me a grounded sense of what systems look like from the inside, and who gets left behind when they break.\nI show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends. A lot of my work, in different forms, has been about making sure people have what they need to make real choices; I helped coordinate one of the first community food networks during the COVID-19 lockdown, and volunteered as a peer supporter for new mothers through Sure Start. Noticing people and not walking past is part of how I approach data work too.\nI passed my Danish PD3 exam, have permanent residency, and my kids still say I sound mærkeligt.\nI’m currently looking for data science and research-focused roles in the Copenhagen area.\n\nView my CV\nSee my projects\n\nYou can also find me on LinkedIn and GitHub."
+  },
+  {
+    "objectID": "projects/index_template.html",
+    "href": "projects/index_template.html",
     "title": "Projects",
     "section": "",
-    "text": "A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.\nRead more →"
+    "text": "Chain-of-Thought Faithfulness in DeepSeek R1\n    \n      Research & Publication\n      Complete\n    \n    Python · LLM evaluation · Prompt design · Statistical analysis\n    MSc thesis examining whether DeepSeek R1's stated reasoning actually reflects the factors driving its answers.\n    \n      Details\n      Found that the model would change its final answer in response to a hint embedded in the prompt, without ever mentioning that hint anywhere in its chain-of-thought. Published in the ACL Anthology as part of IJCNLP-AACL 2025, CHOMPS workshop.\n      Read the paper →\n    \n  \n\n  \n    Referee Bias Analysis\n    \n      Personal Project\n      Write-up in progress\n    \n    R · GLM/GLMM · Statistical modelling\n    Examining whether football referees issue red cards at different rates depending on players' skin tone, using the Crowdstorming dataset.\n    \n      Details\n      Built three increasingly complex GLM/GLMM models to test whether the effect held up as model complexity increased. Used as a refresher project for R after several years working mainly in Python. Next step is extending the analysis to yellow cards as an outcome variable.\n      Read the full write-up →"
   },
   {
-    "objectID": "projects/index.html#referee-bias-analysis-crowdstorming-dataset-june-2026-ongoing",
-    "href": "projects/index.html#referee-bias-analysis-crowdstorming-dataset-june-2026-ongoing",
-    "title": "Projects",
-    "section": "Referee Bias Analysis (Crowdstorming Dataset) June 2026 ongoing",
-    "text": "Referee Bias Analysis (Crowdstorming Dataset) June 2026 ongoing\nA statistical analysis exploring bias in football referee decisions using the Crowdstorming dataset.\nRead more →"
-  },
-  {
-    "objectID": "projects/index.html#tefr-glyphs-july-2026-complete",
-    "href": "projects/index.html#tefr-glyphs-july-2026-complete",
-    "title": "Projects",
-    "section": "Tefr Glyphs, July 2026, complete",
-    "text": "Tefr Glyphs, July 2026, complete\nA project that took the enchanters codex from Tefr RPG, and allows you to search for possible spells from known glyphs.\nRead more →"
-  },
-  {
-    "objectID": "projects/tefr_glyphs.html",
-    "href": "projects/tefr_glyphs.html",
-    "title": "Tefr Glyphs",
+    "objectID": "index.html#hi-im-chrisanna-aka-sanna.",
+    "href": "index.html#hi-im-chrisanna-aka-sanna.",
+    "title": "Sannakate",
     "section": "",
-    "text": "Tefr’s enchanting system is glyph-based, where a character learns glyphs, and then whatever spells they can ‘spell’ with the glyphs they know. There are over 800 spells, so memorising them all is a challenge to both scenerio writers and players (although few players would ever know so many).\nOn the tech side, the codex pdf presented a challenge as the layout is artistic rather than being an easily parsable list of spells. The spells were extracted from the pdf, cleaned, and then stored in a database for searching."
-  },
-  {
-    "objectID": "projects/tefr_glyphs.html#overview",
-    "href": "projects/tefr_glyphs.html#overview",
-    "title": "Tefr Glyphs",
-    "section": "",
-    "text": "Tefr’s enchanting system is glyph-based, where a character learns glyphs, and then whatever spells they can ‘spell’ with the glyphs they know. There are over 800 spells, so memorising them all is a challenge to both scenerio writers and players (although few players would ever know so many).\nOn the tech side, the codex pdf presented a challenge as the layout is artistic rather than being an easily parsable list of spells. The spells were extracted from the pdf, cleaned, and then stored in a database for searching."
-  },
-  {
-    "objectID": "projects/tefr_glyphs.html#approach",
-    "href": "projects/tefr_glyphs.html#approach",
-    "title": "Tefr Glyphs",
-    "section": "Approach",
-    "text": "Approach\n\nSpells\nThe spells were scraped from the Enchanter’s Codex, beta 1.7, and then cleaned and processed before being extracted. It is believed that there should be 815 spells, but only 811 were recovered. If errors are found, please let me know so this can be improved!\n\n\nGlyph notes\nSome glyphs are learned together and the app selects them as such:\n\nEvu and Sen\nTira, Ekat, and Worav\n\nSelecting one of those glyphs selects the whole learning group, but the spells themselves still list the individual glyphs separately."
-  },
-  {
-    "objectID": "projects/tefr_glyphs.html#status",
-    "href": "projects/tefr_glyphs.html#status",
-    "title": "Tefr Glyphs",
-    "section": "Status",
-    "text": "Status\nComplete: Streamlit App or on Tefr.com"
+    "text": "I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.\nMy MSc thesis, published in the ACL Anthology, examined whether DeepSeek R1’s chain-of-thought reasoning faithfully reflects its internal process, or whether it’s largely a rationalisation after the fact. My BSc thesis found that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI.\nWhilst studying, I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics; helping students think critically about not just how to build models, but when and whether to. A model trained on biased data propagates that bias; deciding how to handle that should be a conscious choice. We should be making the world better, not accidentally adding to the chaos.\nBefore data science I spent over a decade in healthcare, local government, and retail. Those roles gave me a grounded sense of what systems look like from the inside, and who gets left behind when they break.\nI show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends. A lot of my work, in different forms, has been about making sure people have what they need to make real choices; I helped coordinate one of the first community food networks during the COVID-19 lockdown, and volunteered as a peer supporter for new mothers through Sure Start. Noticing people and not walking past is part of how I approach data work too.\nI passed my Danish PD3 exam, have permanent residency, and my kids still say I sound mærkeligt.\nI’m currently looking for data science and research-focused roles in the Copenhagen area.\n\nView my CV\nSee my projects\n\nYou can also find me on LinkedIn and GitHub."
   }
 ]

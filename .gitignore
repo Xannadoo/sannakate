@@ -1,2 +1,6 @@
 /.quarto/
 **/*.quarto_ipynb
+
+
+*template*
+*idiot_guide*
