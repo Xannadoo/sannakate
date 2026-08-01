@@ -100,7 +100,7 @@ I work best on problems that don't have a clean answer yet, with people who'll t
 
 ## About me
 
-- Moved to Denmark in mid-2020 and passed PD3 in 2024. My kids say I still sound \textit{mærkeligt}
+- Moved to Denmark in mid-2020 and passed PD3 in 2024. My kids say I still sound *mærkeligt*
 - Student Volunteer for ALIFE Conference 2024
 - Maths was my favourite subject at school, something I still get told was weird
 - Enjoy building things, from Python projects to clothing and bread
