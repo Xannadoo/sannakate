@@ -28,6 +28,6 @@ There are 2 versions, the first is a fixed version that is publically available,
 
 Working, but not as perfect as I'd like  and I'd like to mess with it further someday.
 
-Working version of the fixed system: [Streamlit App](sannakatemealplanner.streamlit.app)
+Working version of the fixed system: [Streamlit App](https://sannakatemealplanner.streamlit.app)
 
 Cloneable repo with the code and instructions for running it locally: [GitHub](https://github.com/Xannadoo/web_recipes)
