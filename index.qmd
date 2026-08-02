@@ -9,7 +9,7 @@ These days that "finding the thing that doesn't add up" habit is aimed at AI sys
 
 Whilst studying I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics. Mostly that meant helping students think about not just how to build a model, but when and whether to. A model trained on biased data won't magically be unbiased. Someone has to decide what to do about that, and I'd rather more people were equipped to make that call properly.
 
-Before data science I spent over a decade in healthcare, local government, and retail. None of it looked like data science at the time. All of it was, really: tracking down discrepancies, keeping records straight under pressure, noticing when numbers that were supposed to add up didn't.
+Before data science I spent over a decade in healthcare, local government, and retail. None of it looked like data science at the time. All of it involved the same instinct: something doesn't add up, and I want to know why.
 
 I show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends (I nearly fell off that one, in my defence I found out shortly after I was 20 weeks pregnant at the time). A lot of my work outside data science has quietly been about the same thing, making sure people have what they need to make real choices. I helped coordinate a community response team during the first COVID lockdown, and volunteered as a peer supporter for new mothers. Noticing people and not walking past them is part of how I approach data work too, it's just less obvious from the outside.
 

@@ -22,11 +22,11 @@ Fluent English, Conversational Danish
 
 ## Profile
 
-I have a strong instinct for finding what doesn't add up: in spreadsheets, in a workflow, in model outputs, and I find it interesting and the kind of frustrating that is motivating. My MSc thesis put that instinct to work on DeepSeek R1, and found it behaved differently in response to a hint without mentioning the hint in its reasoning. The model appears to construct a reasonable-sounding narrative after the fact, not a lie, but not the window into a blackbox that COT was being protrayed to be.
+I have a strong instinct for finding what doesn't add up, whether in a spreadsheet, a workflow, or a model's output, and a genuine interest in working out why. My MSc thesis put that instinct to use on DeepSeek R1, and found that the model behaved differently in response to a hint without acknowledging the hint in its reasoning. This does not appear to be dishonesty so much as a plausible narrative constructed after the fact, which is a meaningful problem if chain-of-thought reasoning is being relied on as a genuine window into how a model reaches its answers.
 
-Most of my career, even the parts that don't look like data science on paper, has involved the same question: is this system actually doing what we think it's doing, and what happens to the real person when the system gets it wrong? I'd like to keep asking that question somewhere it can do some good.
+Most of my career, including the parts that do not look like data science on paper, has involved the same underlying question: is this system doing what we think it is doing, and what happens to the people affected when it is not? I would like to keep asking that question somewhere it can make a practical difference.
 
-I work best on problems that don't have a clean answer yet, with people who like to talk about the details. I'd rather be somewhere people disagree productively and push things forwards, than somewhere everyone nods along without challenging assumptions. 
+I work best on problems without a clean answer yet, alongside people willing to get into the detail. I would rather work somewhere disagreement is productive and assumptions get challenged than somewhere everyone nods along.
 
 ## Education
 
@@ -100,8 +100,9 @@ I work best on problems that don't have a clean answer yet, with people who like
 
 ## About me
 
-- Moved to Denmark in mid-2020 and passed PD3 in 2024. My kids say I still sound *mærkeligt*
-- Student Volunteer for ALIFE Conference 2024
-- Maths was my favourite subject at school, something I still get told was weird
-- Enjoy building things, from Python projects to clothing and bread
-- Awarded "coffee drinker of the semester" in 2024. I still have the mug
+- I am a Star Trek nerd. TNG vs VOY vs DS9 is one of my favourite discussions.\
+&ensp;ᯓ★ It's the same federation, being stress-tested in wildly different situations.
+- I knit, sew, crochet, bake, and grow spinach and flowers in my yard.
+- I was awarded "coffee drinker of the semester" in 2024. I still have the mug.
+- I played monsters and NPCs for a LARP group for several years, which led to building a roundhouse.
+- I cannot do spoonerisms at all. This has never once come up professionally.
