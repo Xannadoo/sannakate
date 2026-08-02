@@ -144,21 +144,49 @@ ul.task-list li input[type="checkbox"] {
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>A personal statistical analysis using the Crowdstorming dataset (Silberzahn et al., 2018) to examine whether referees issue red cards at different rates depending on players’ skin tone.</p>
-<p>The main goal was to refresh R skills after working mainly in Python for the last few years.</p>
+<p>The dataset is a well-known one in the methodology world: 29 independent analyst teams were given the same data and the same question, and came back with effect sizes ranging from 0.89 to 2.93 (odds ratio units), with roughly two-thirds finding a significant effect and the rest finding none. That variability is most of what makes it an interesting dataset to sit down with personally, rather than just a red-card-counting exercise.</p>
+<p>The main goal was to refresh R skills after working mainly in Python for the last few years, and to get some hands-on practice with statistical modelling techniques I don’t reach for often, while poking at a real methodological question rather than a toy problem.</p>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>Player–referee dyads (~146,000 of them) from the top divisions of England, Germany, France, and Spain, 2012–13 season. Each row records how many games a given player and referee crossed paths for, and what happened across those games: goals, yellow cards, yellow-red cards, straight red cards.</p>
+<p>Skin tone was rated by two independent coders on a 5-point scale from player photos, available for 1585 of 2053 players. The two raters agreed closely (r = 0.92), and I averaged their scores into a single continuous measure.</p>
+<p>A few data quality quirks turned up along the way, which felt worth documenting rather than quietly smoothing over:</p>
+<ul>
+<li>The dataset’s README states 1586 players had usable photos; the data itself shows 1585. Never resolved, noted and moved on.</li>
+<li>Missingness in position data turned out to be statistically related to skin tone (p &lt; 10⁻¹⁵), but the actual size of the difference was tiny (about 0.03 on a 0–1 scale). This is a nice live example of statistical significance and practical importance pulling apart when the sample size is large.</li>
+</ul>
 </section>
 <section id="approach" class="level2">
 <h2 class="anchored" data-anchor-id="approach">Approach</h2>
-<p>Built three increasingly complex GLM/GLMM models, checking whether findings held up as complexity increased.</p>
+<p>Built three increasingly complex models, checking at each stage whether the skin tone effect held up as complexity, and realism, increased:</p>
+<ol type="1">
+<li><strong>Player-level negative binomial.</strong> Simplest possible starting point: aggregate to one row per player, model total red cards against skin tone, offset by total games played. Negative binomial rather than Poisson, since the data showed clear overdispersion (variance noticeably exceeding the mean).</li>
+<li><strong>Crossed random-effects model.</strong> The naive model above ignores that both players <em>and</em> referees appear repeatedly in the data, and referees plausibly differ in card-happiness independent of who they’re refereeing. Moved to dyad-level data with a GLMM (<code>lme4::glmer</code>), using crossed random intercepts for player and referee, not nested, since any referee sees many players and vice versa.</li>
+<li><strong>Adding position.</strong> Added a four-category position grouping (Goalkeeper / Defender / Midfielder / Attacker) as a fixed effect, since red cards are overwhelmingly foul-related and defenders are structurally more exposed to that risk than, say, forwards.</li>
+</ol>
+</section>
+<section id="results-so-far" class="level2">
+<h2 class="anchored" data-anchor-id="results-so-far">Results so far</h2>
+<p>The skin tone effect turned out to be remarkably stable across all three specifications, somewhere between a 37% and 44% higher red-card rate for the darkest-rated players compared to the lightest, and statistically significant throughout (p ≈ 0.001–0.002 in each model). All three estimates sit comfortably inside the original study’s 0.89–2.93 range.</p>
+<p>What surprised me more than the headline number was the position result: I’d expected defenders to clearly outpace goalkeepers in red card rate, given how much more they’re involved in last-ditch tackling, but the difference wasn’t statistically significant, only attackers (lower than goalkeepers, as expected) reached conventional significance.</p>
+</section>
+<section id="limitations-worth-flagging" class="level2">
+<h2 class="anchored" data-anchor-id="limitations-worth-flagging">Limitations worth flagging</h2>
+<p>Several dataset features turned out to be less useful than they first look, which felt worth being upfront about:</p>
+<ul>
+<li><strong>League, club, and age (via birthday) are all recorded as of dataset creation, not as of each game.</strong> Since dyads span multiple seasons, a player’s league or club may well have changed between games within the same dyad and these fields can’t be reliably tied to the specific games being analysed, so I’ve left them out rather than use them misleadingly.</li>
+<li>Relatedly, there’s no way to ask whether say <em>younger</em> players get more red cards for rash play, since age can’t be reliably reconstructed at the time of each game.</li>
+</ul>
 </section>
 <section id="tools" class="level2">
 <h2 class="anchored" data-anchor-id="tools">Tools</h2>
-<p>R, GLM/GLMM</p>
+<p>R, <code>glm.nb</code> (MASS), <code>glmer</code> (lme4), tidyverse for wrangling.</p>
 </section>
 <section id="status" class="level2">
 <h2 class="anchored" data-anchor-id="status">Status</h2>
-<p>Write-up in progress. A next step is extending the analysis to yellow cards as an additional outcome variable.</p>
-<!-- Add a link here once there's a deployed app or report, e.g.:
-[View interactive app →](https://your-streamlit-app-url) -->
+<p>Write-up in progress. Next step: extending the analysis to yellow cards as a parallel outcome, to see whether any skin tone effect shows up for minor infractions too, or looks specific to red cards.</p>
+<p>A fuller, more formal write-up (with full model tables, diagnostics, and proper citations!) is in progress in LaTeX and a PDF will be linked here once it’s in a reasonable state.</p>
 
 
 </section>

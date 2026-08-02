@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Meal Planner – Sannakate</title>
+<title>Tefr Oracle – Sannakate</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Meal Planner</h1>
+<h1 class="title">Tefr Oracle</h1>
 </div>
 
 
@@ -143,32 +143,29 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>I built a meal planning system for my family. It scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety (because despite what my kids might want, we are <em>not</em> eating pasta every night!).</p>
-<p>I wanted to show that I could take a project from idea to implementation,and make something that was useful to me (and maybe others!). I wanted to combine a few different skills: web scraping, LLMs, and building a simple UI so it was accessable to others. In particular, I wanted to see if I could use a local LLM to tag recipes in a way that was useful for meal planning, and to see if I could get it to do that without sending any data to the cloud.</p>
+<p>Tefr’s rulebooks are dense and split across several chapters, which makes them slow to search by hand, especially for scenario writers who need a quick, precise answer buried somewhere in the Healing chapter or the Credo, or new (or experienced!) GMs in the middle of a session. This project aims to turn the rulebook PDF into a natural-language-queryable knowledge base: a Retrieval-Augmented Generation (RAG) system that lets you ask a question in plain English and get back the relevant rule, spell, or lore passage.</p>
+<p>On the tech side, the challenge is similar in spirit to the Glyphs project but harder: the source PDFs use a two-column artistic layout, mix prose with structured entries (plants, potions, spells), and vary in structure from chapter to chapter. Rather than one generic parser, the pipeline separates <em>parsing</em> (PDF → clean markdown) from <em>chunking</em> (markdown → structured, searchable pieces), with chapter-specific logic where the content demands it.</p>
 </section>
 <section id="approach" class="level2">
 <h2 class="anchored" data-anchor-id="approach">Approach</h2>
-<p>I built this with “future me” in mind. Looking out for the part of the system that is small now but could cause a problem later:</p>
-<ul>
-<li>Tuneable config: All weights, thresholds, and site-specific rules (anything I might want to mess around with at 3am when it occurs to me!) live in a config.yaml.</li>
-<li>Data led: My first attempt at calculating ease felt off. Looking at the actual distributions for cooking and prep times showed me why, and the curves were fitted to what was actually there.</li>
-<li>Data cleaning: Actually one of my favourite parts of a project. Getting the scraped data from different sites into a consistent format, no sneaky HTML tags hiding to mess things up later. Formatting well from the start saves fussing and fixing later.</li>
-</ul>
-<p>There are 2 versions, the first is a fixed version that is publically available, the second is a more flexible version that can be run locally. This version can be customised with recipes, family names and individual ratings for each recipe.</p>
+<section id="parsing" class="level3">
+<h3 class="anchored" data-anchor-id="parsing">Parsing</h3>
+<p>Each chapter PDF is run through a parser built on <code>pymupdf</code>, with a local vision model (<code>minicpm-v</code>, via Ollama) as a fallback for image-heavy pages. The two-column layout used throughout the rulebooks required custom detection logic, clustering text blocks by their x-coordinates to correctly reconstruct reading order.</p>
 </section>
-<section id="tools" class="level2">
-<h2 class="anchored" data-anchor-id="tools">Tools</h2>
-<ul>
-<li>Selenium and BeautifulSoup for scraping</li>
-<li>Ollama running Qwen2.5:7b for tagging</li>
-<li>Streamlit for the UI.</li>
-</ul>
+<section id="chunking" class="level3">
+<h3 class="anchored" data-anchor-id="chunking">Chunking</h3>
+<p>A generic chunker handles chapters that are mostly prose and headings, splitting them into story, rules, and spell chunks. Spell entries are parsed into structured metadata: glyph names, glyph combinations, translations, duration, and range — so the resulting database can answer both “what can I do with glyph X” and “what does combination Y do.”</p>
+<p>Some chapters need their own logic. The Healing chapter, for example, mixes plant entries, potion entries (grouped by skill level), and rules prose in a layout where the two-column interleaving makes naive entry-detection unreliable. A specialist chunker was written for it, using blank-line boundaries to detect entries rather than lookahead, which was misreading interleaved prose as false entry names.</p>
+<p>Every chunker, generic or specialist, outputs to the same JSONL format, so chapter-specific parsing quirks stay contained without breaking the rest of the pipeline.</p>
+</section>
+<section id="retrieval" class="level3">
+<h3 class="anchored" data-anchor-id="retrieval">Retrieval</h3>
+<p>Decisions still to be made here…</p>
+</section>
 </section>
 <section id="status" class="level2">
 <h2 class="anchored" data-anchor-id="status">Status</h2>
-<p>Working, but not as perfect as I’d like and I’d like to mess with it further someday.</p>
-<p>Working version of the fixed system: <a href="sannakatemealplanner.streamlit.app">Streamlit App</a></p>
-<p>Cloneable repo with the code and instructions for running it locally: <a href="https://github.com/Xannadoo/web_recipes">GitHub</a></p>
+<p>In progress. Parsing and chunking are working for most chapters, with per-chapter chunkers being written as needed (Healing is done; Credo is next). Once all chapters are chunked, the next step is loading everything into a vector database to make it queryable.</p>
 
 
 </section>

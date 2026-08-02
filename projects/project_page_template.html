@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Meal Planner – Sannakate</title>
+<title>Title – Sannakate</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Meal Planner</h1>
+<h1 class="title">Title</h1>
 </div>
 
 
@@ -143,32 +143,18 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>I built a meal planning system for my family. It scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety (because despite what my kids might want, we are <em>not</em> eating pasta every night!).</p>
-<p>I wanted to show that I could take a project from idea to implementation,and make something that was useful to me (and maybe others!). I wanted to combine a few different skills: web scraping, LLMs, and building a simple UI so it was accessable to others. In particular, I wanted to see if I could use a local LLM to tag recipes in a way that was useful for meal planning, and to see if I could get it to do that without sending any data to the cloud.</p>
 </section>
 <section id="approach" class="level2">
 <h2 class="anchored" data-anchor-id="approach">Approach</h2>
-<p>I built this with “future me” in mind. Looking out for the part of the system that is small now but could cause a problem later:</p>
-<ul>
-<li>Tuneable config: All weights, thresholds, and site-specific rules (anything I might want to mess around with at 3am when it occurs to me!) live in a config.yaml.</li>
-<li>Data led: My first attempt at calculating ease felt off. Looking at the actual distributions for cooking and prep times showed me why, and the curves were fitted to what was actually there.</li>
-<li>Data cleaning: Actually one of my favourite parts of a project. Getting the scraped data from different sites into a consistent format, no sneaky HTML tags hiding to mess things up later. Formatting well from the start saves fussing and fixing later.</li>
-</ul>
-<p>There are 2 versions, the first is a fixed version that is publically available, the second is a more flexible version that can be run locally. This version can be customised with recipes, family names and individual ratings for each recipe.</p>
+<section id="relevant-subtitles-as-needed" class="level3">
+<h3 class="anchored" data-anchor-id="relevant-subtitles-as-needed">Relevant subtitles as needed</h3>
+<section id="additional-notes-as-needed" class="level4">
+<h4 class="anchored" data-anchor-id="additional-notes-as-needed">Additional notes as needed</h4>
 </section>
-<section id="tools" class="level2">
-<h2 class="anchored" data-anchor-id="tools">Tools</h2>
-<ul>
-<li>Selenium and BeautifulSoup for scraping</li>
-<li>Ollama running Qwen2.5:7b for tagging</li>
-<li>Streamlit for the UI.</li>
-</ul>
+</section>
 </section>
 <section id="status" class="level2">
 <h2 class="anchored" data-anchor-id="status">Status</h2>
-<p>Working, but not as perfect as I’d like and I’d like to mess with it further someday.</p>
-<p>Working version of the fixed system: <a href="sannakatemealplanner.streamlit.app">Streamlit App</a></p>
-<p>Cloneable repo with the code and instructions for running it locally: <a href="https://github.com/Xannadoo/web_recipes">GitHub</a></p>
 
 
 </section>
