@@ -3,30 +3,17 @@ title: "Projects"
 ---
 
 ```{=html}
-<div class="project-grid">
+<div class="project-filters" id="project-filters"></div>
+<div class="project-grid" id="project-grid">
 
-  <div class="project-card">
-    <h3>Chain-of-Thought Faithfulness in DeepSeek R1</h3>
-    <div class="badge-row">
-      <span class="badge badge-type-research">Research &amp; Publication</span>
-      <span class="badge badge-status-complete">Complete</span>
-    </div>
-    <div class="skill-tags">Python · LLM evaluation · Prompt design · Statistical analysis</div>
-    <p>MSc thesis examining whether DeepSeek R1's stated reasoning actually reflects the factors driving its answers.</p>
-    <details>
-      <summary>Details</summary>
-      <p>Found that the model would change its final answer in response to a hint embedded in the prompt, without ever mentioning that hint anywhere in its chain-of-thought. Published in the ACL Anthology as part of IJCNLP-AACL 2025, CHOMPS workshop.</p>
-      <a href="https://aclanthology.org/2025.chomps-main.2/" target="_blank">Read the paper →</a>
-    </details>
-  </div>
-
-  <div class="project-card">
+  <div class="project-card" data-type="personal" data-status="completed" data-tags="Python, web scraping, LLM, UI/UX">
     <h3>Meal Planner</h3>
     <div class="badge-row">
       <span class="badge badge-type-personal">Personal Project</span>
       <span class="badge badge-status-complete">Completed</span>
     </div>
-    <div class="skill-tags">LLM, web scraping, data processing, UI/UX</div>
+    <div class="date-tags">July 2026</div>
+    <div class="skill-tags">LLM · web scraping · data processing · UI/UX</div>
     <p>A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.</p>
     <details>
       <summary>Details</summary>
@@ -35,28 +22,31 @@ title: "Projects"
     </details>
   </div>
 
-
-  <div class="project-card">
-    <h3>Tefr Glyphs Combinations Checker</h3>
+  <div class="project-card" data-type="personal" data-status="completed" data-tags="Python, NLP, UI/UX">
+    <h3>Tefr Glyph Spell Checker</h3>
     <div class="badge-row">
       <span class="badge badge-type-personal">Personal Project</span>
       <span class="badge badge-status-complete">Completed</span>
     </div>
-    <div class="skill-tags">NLP, UI/UX</div>
+    <div class="date-tags">July 2026</div>
+    <div class="skill-tags">Python · NLP · UI/UX</div>
     <p>A project that took the enchanters codex from Tefr RPG, and allows you to search for possible spells from known glyphs.</p>
     <details>
       <summary>Details</summary>
-      <p>Tefr's enchanting system uses a glyph-based approach. Characters learn glyphs, and combine them to create spells. With over 800 known spells, this is a lot to remember so this project helps users find valid combinations.</p>
+      <p>Tefr's enchanting system uses a glyph-based approach. Characters learn glyphs, and combine them to create spells. With over 800 known spells, this is a lot to remember so this project helps users find valid combinations.
+        This was an offshoot of the Tefr Oracle project, which is still in progress.</p>
+      </p>
       <a href="tefr_glyphs.qmd">Read more here</a>
     </details>
   </div>
 
-    <div class="project-card">
+  <div class="project-card" data-type="personal" data-status="in progress" data-tags="R, Statistics">
     <h3>Referee Bias Analysis</h3>
     <div class="badge-row">
       <span class="badge badge-type-personal">Personal Project</span>
       <span class="badge badge-status-progress">In progress</span>
     </div>
+    <div class="date-tags">June 2026</div>
     <div class="skill-tags">R · GLM/GLMM · Statistical modelling</div>
     <p>Examining whether football referees issue red cards at different rates depending on players' skin tone, using the Crowdstorming dataset.</p>
     <details>
@@ -65,9 +55,126 @@ title: "Projects"
       <a href="crowdstorming.qmd">Read more here</a>
     </details>
   </div>
-  <!-- Copy one of the blocks above for each new project. Swap the badge classes:
+
+  <div class="project-card" data-type="personal" data-status="in progress" data-tags="Python, LLM, Agentic AI">
+    <h3>Job Tailor</h3>
+    <div class="badge-row">
+      <span class="badge badge-type-personal">Personal Project</span>
+      <span class="badge badge-status-progress">In progress</span>
+    </div>
+    <div class="date-tags">June 2026</div>
+    <div class="skill-tags">Python · Large Language Models · Agentic AI</div>
+    <p>Personalised agentic system for tailoring job applications to specific roles.</p>
+    <details>
+      <summary>Details</summary>
+      <p>A local, privacy-first pipeline that tailors a CV profile to a specific job advert, with an independent fact-checking stage built to catch fabricated claims before they reach a real application. Runs entirely on open-weight models via Ollama, so no API costs or external data sharing. Currently building out an adversarial critic loop to flag weak framing and genuine gaps, alongside the fact-checker.</p>
+      </p>
+      <a href="job_tailor.qmd">Read more here</a>
+    </details>
+  </div>
+
+  <div class="project-card" data-type="personal" data-status="in progress" data-tags="Python, NLP, LLM, RAG">
+    <h3>Tefr Oracle</h3>
+    <div class="badge-row">
+      <span class="badge badge-type-personal">Personal Project</span>
+      <span class="badge badge-status-progress">In progress</span>
+    </div>
+    <div class="date-tags">May 2026</div>
+    <div class="skill-tags">Large Language Models · Natural Language Processing · Retrieval-Augmented Generation · Python · Data Processing</div>
+    <p>Natural language query system for the Tefr RPG rule system.</p>
+    <details>
+      <summary>Details</summary>
+      <p>Work in progress... Currently deciding how to process the complex pdf documents into meaningful chunks as naive chunking strategies are not sufficient.
+        The goal is to allow users to ask questions about the Tefr RPG rule system in natural language, and have the system return natural language answers, and reference the rule book. This will be done using a combination of retrieval-augmented generation and a locally hosted large language model to respect the intellectual property of the author.</p>
+      </p>
+      <a href="tefr_oracle.qmd">Read more here</a>
+    </details>
+  </div>
+
+  <div class="project-card" data-type="research" data-status="completed" data-tags="Python, LLM, Statistics">
+    <h3>Chain-of-Thought Faithfulness</h3>
+    <div class="badge-row">
+      <span class="badge badge-type-research">Research &amp; Publication</span>
+      <span class="badge badge-status-complete">Complete</span>
+    </div>
+    <div class="date-tags">Sept 2025</div>
+    <div class="skill-tags">Python · LLM evaluation · Statistical analysis</div>
+    <p>MSc thesis examining whether DeepSeek R1's stated reasoning actually reflects the factors driving its answers.</p>
+    <details>
+      <summary>Details</summary>
+      <p>We found that the model changed its behaviour in response to a hint embedded in the prompt, without referencing that hint anywhere in its chain-of-thought. This implies that the COT is not a faithful representation of the underlying reasoning but would be better considered a post-hoc explaination. Published in the ACL Anthology as part of IJCNLP-AACL 2025, CHOMPS workshop.</p>
+      <a href="https://aclanthology.org/2025.chomps-main.2/" target="_blank">Read the paper →</a>
+    </details>
+  </div>
+
+<!-- Copy one of the blocks above for each new project. Swap the badge classes:
        badge-type-research or badge-type-personal
        badge-status-complete or badge-status-progress -->
 
 </div>
+<script>
+(function() {
+  const grid = document.getElementById('project-grid');
+  const cards = Array.from(grid.querySelectorAll('.project-card'));
+  const filterBar = document.getElementById('project-filters');
+
+  const groups = {
+    type: { label: 'Type', values: new Set(), active: new Set() },
+    status: { label: 'Status', values: new Set(), active: new Set() },
+    tags: { label: 'Tags', values: new Set(), active: new Set() }
+  };
+
+  cards.forEach(card => {
+    groups.type.values.add(card.dataset.type);
+    groups.status.values.add(card.dataset.status);
+    (card.dataset.tags || '').split(',').map(t => t.trim()).filter(Boolean)
+      .forEach(tag => groups.tags.values.add(tag));
+  });
+
+  function buildGroup(key) {
+    const g = groups[key];
+    const wrap = document.createElement('div');
+    wrap.className = 'filter-group';
+
+    const label = document.createElement('span');
+    label.className = 'filter-group-label';
+    label.textContent = g.label + ':';
+    wrap.appendChild(label);
+
+    Array.from(g.values).sort().forEach(value => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'filter-pill';
+      btn.textContent = value;
+      btn.dataset.group = key;
+      btn.dataset.value = value;
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        if (g.active.has(value)) g.active.delete(value);
+        else g.active.add(value);
+        applyFilters();
+      });
+      wrap.appendChild(btn);
+    });
+
+    return wrap;
+  }
+
+  filterBar.appendChild(buildGroup('type'));
+  filterBar.appendChild(buildGroup('status'));
+  filterBar.appendChild(buildGroup('tags'));
+
+  function applyFilters() {
+    cards.forEach(card => {
+      const cardTags = (card.dataset.tags || '').split(',').map(t => t.trim());
+      const typeOk = groups.type.active.size === 0 || groups.type.active.has(card.dataset.type);
+      const statusOk = groups.status.active.size === 0 || groups.status.active.has(card.dataset.status);
+      const tagsOk = groups.tags.active.size === 0 ||
+        cardTags.some(t => groups.tags.active.has(t));
+
+      card.style.display = (typeOk && statusOk && tagsOk) ? '' : 'none';
+    });
+  }
+})();
+</script>
 ```

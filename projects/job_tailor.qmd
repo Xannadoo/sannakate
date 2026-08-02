@@ -1,0 +1,67 @@
+---
+title: "job-tailor: a locally-run CV tailoring pipeline"
+---
+
+## Overview
+
+job-tailor is a small, locally-run pipeline that takes a job advert and a "master document" of my own career history, personal details and stories, and produces a tailored CV profile paragraph, checked for factual accuracy before I ever see it as a finished draft. 
+I built it for two overlapping reasons: I needed a genuinely useful tool for my own job search, and I wanted a project that would let me demonstrate agentic AI system design rather than just describe it on a CV.
+
+It's deliberately scoped as a proof of concept. It does not search for jobs, submit applications, or manage the wider job hunt: it does one step, tailoring, and does it carefully. I'd rather create something narrow that works reliably and that I can honestly describe than something broader that half-works and requires generous framing to call "agentic."
+
+The whole thing runs on a free, fully local stack: a 14B parameter open-weight model (qwen2.5-coder:14b) served through Ollama on a household machine, accessed via a LiteLLM proxy. No API costs, no data leaving the house.
+
+## Approach
+
+The pipeline is built as a sequence of stages, each one a single LLM call with a tightly scoped job, plus one stage that is deliberately not an LLM call at all.
+
+### Stage 1: fit analysis
+
+Given the job advert and my master document, this stage identifies the handful of requirements that matter most for the role, finds concrete matching evidence for each (not vague summaries, actual facts from the document), and is explicit about genuine gaps. I want the gaps stated plainly here, because this stage is for my own planning, not for anyone else to see.
+
+### Stage 2: draft profile
+
+Using the fit analysis to decide what to lead with, this stage drafts the actual CV profile paragraph, under a fairly strict style brief (UK spelling, no daft padding phrases like "passionate about" or "leveraging my expertise", specific over general, written the way I'd actually actually say it rather than the way LinkedIn seems to be making us all sound the same).
+
+### Stage 3: independent fact-check
+
+This is the stage I think matters most, and it's built around a specific design choice: the fact-checker never sees the job advert. It only sees the master document and the draft profile, and checks every claim in the draft against the source.
+
+This asymmetry is deliberate. The most common and most dangerous failure I saw in early testing wasn't the model inventing things out of nowhere, it was the model echoing terminology from the job advert back as if it were my own experience, because that terminology was sitting right there in context alongside my real background. Telling the model "don't do this" in a prompt was a much weaker fix than simply not giving it the opportunity: if the fact-checker has never seen the job ad's wishlist, it has no vocabulary to fabricate from. Removing visibility structurally turned out to be a far more robust fix than any instruction-level guardrail I tried.
+
+The fact-checker also has to handle a distinction I hadn't fully appreciated going in: not every kind of claim needs the same evidentiary bar. A claim like "confident with Python" is either traceable to the source document or it isn't, full stop. A claim like "strong work ethic" will almost never be stated in those words anywhere in a career history; the honest question for that kind of claim isn't "is this written down" but "is this a reasonable reading of an actual pattern in the document." Applying the hard-evidence standard to soft character claims produced false flags on things that were genuinely true; applying the soft character claims produced false flags on things that were genuinely true; applying the soft standard to technical claims let fabrications through. Both bars needed to exist, and the checker needed to know which one applied to which sentence.
+
+One more thing this stage protects deliberately: honest gap disclosures. If the draft says something like "despite limited exposure to X," that's a feature, not an error, and the fact-checker is explicitly told never to flag or "correct away" a stated absence of a skill. Losing that distinction would make the tool actively dishonest in the direction of overclaiming, which is the opposite of what it's for.
+
+### Handling dates without asking the model to do arithmetic
+
+Early on, date handling was the single most persistent source of failures, not close calls, but confidently wrong answers, like miscalculating a role spanning January 2023 to June 2025 as four years. No amount of prompt refinement made this reliable, because date arithmetic isn't the kind of task an LLM is well suited to in the first place, especially a smaller model.
+
+The fix was to stop asking. A small deterministic Python module parses every date range out of the master document, computes whether each role or qualification is finished or ongoing relative to today, and calculates duration, all before the model ever sees a prompt. The prompts are then given these facts as pre-computed statements ("finished, duration 2.4 years") with explicit instructions not to recompute or second-guess them. The model's job changed from "do the arithmetic" to "use the answer you've been given," which is a much better match for what the model is actually capable of.
+
+### In progress: an adversarial critic loop
+
+The current focus is the piece that will make this genuinely agentic rather than a linear checklist of LLM calls: a critic stage that reviews the draft against the job advert (this one *is* allowed to see the job ad, on purpose, its job is competitiveness, not accuracy) and raises structured flags against anything that weakens the application.
+
+Flags fall into four categories: missing evidence for a claim, framing that undersells real experience, a genuine gap I just don't have, and an outright mismatch with what the role wants. The category that took the most thought was genuine gaps: flags in that category are hard-coded to never carry a suggested fix, because the alternative, letting the critic suggest "better wording" for something that isn't there, is just a polite way of asking the model to make stuff up. If there's no honest way to close a gap through writing, the tool should say so and stop, not paper over it.
+
+The critic and the fact-checker are deliberately asymmetric (one sighted on the job ad, one blind to it), and the loop control between them, how many rounds run, when a flag counts as resolved, what happens when the two disagree, lives in ordinary code rather than in the model. I'd rather have a boring, predictable convergence rule than trust the model to decide when it's "done." Where the fact-checker and critic disagree, the fact-checker wins the tie, since accuracy takes precedence over competitiveness. Convergence is also tracked per flag rather than for the draft as a whole, with an explicit "flagged for review" status for anything that doesn't resolve cleanly after a few rounds so the goal is bounded, sensible effort, not forcing every flag closed by construction.
+
+#### A note on validating structured output
+
+Before building the loop driver itself, I wrote a small standalone script whose only job is confirming the critic reliably returns valid, well-formed JSON in the flag schema I need, independent of the rest of the pipeline. It's a deliberately unglamorous piece of infrastructure, but structured-output reliability is exactly the kind of thing that's easy to assume works and expensive to discover doesn't, three layers up.
+
+### On the failure log
+
+Alongside the code, I've kept a running log of every distinct bug I hit while building this, currently at a douzen entries. I've come to think of this as part of the project's actual output, not just development scaffolding. 
+The interesting failure mode with LLM pipelines isn't the model crashing or refusing; it's the model producing something fluent and **confident and wrong**, which looks exactly like success until you check it carefully. A log of specific, named ways that happened (and what structural or code-level fix actually closed each one, as opposed to a prompt tweak that just moved the problem) is a more honest demonstration of what building this kind of system involves than a clean success story would be. I also find this fun and the most interesting part, models behave the way they do because of their training, they are not 'trying' to be dishonest, that acribes an intention to a system that has none, but the way they behave is still a real-world problem that can be worked with.
+
+## Future plans
+
+- **Model comparison.** Empirically test a few larger open-weight models (32B-class) on the same household hardware before committing to a change, and as this would be too large to sit entirely on the GPU, whether the performance trade-off is worth it.
+- **Style critique pass** and **LaTeX integration** for a polished final output, once the critic loop is solid.
+- **A controlled framing experiment.** Run the same master document through the pipeline with only the name and pronouns swapped, and diff the outputs for subtle shifts in language, for instance, whether achievements get framed with agentic verbs ("led", "managed") versus more collaborative ones ("helped", "supported") depending on the name attached. This is framed deliberately as a side experiment using the pipeline as an instrument, not as a feature of the tool itself, and any findings would be specific to this one model rather than a general claim. This is mostly for my own curiousity and it connects to a research interest of mine from my master's thesis, which looked at whether a model's stated reasoning actually reflects what's driving its output, this would be a small, concrete instance of the same underlying question: what's actually driving the model's word choices, versus what it would say if asked to explain them.
+
+## Status
+
+The core three-stage pipeline (fit analysis, draft profile, fact-check) is built and running end-to-end on the local stack. The date-handling module is complete and independently tested. The critic stage's prompt and data model are written and its JSON output has been validated in isolation; the loop driver that ties it into the rest of the pipeline is the current work in progress.

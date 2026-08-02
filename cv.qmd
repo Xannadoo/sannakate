@@ -22,11 +22,11 @@ Fluent English, Conversational Danish
 
 ## Profile
 
-I have a strong instinct for finding what doesn't add up, in spreadsheets, in model outputs, in chain-of-thought reasoning, and I find it interesting rather than frustrating. My MSc thesis put that instinct to work on DeepSeek R1, and found it would change its answer in response to a hint without ever mentioning the hint in its reasoning. The model wasn't lying exactly, it just wasn't telling the whole story, which felt like familiar territory.
+I have a strong instinct for finding what doesn't add up: in spreadsheets, in a workflow, in model outputs, and I find it interesting and the kind of frustrating that is motivating. My MSc thesis put that instinct to work on DeepSeek R1, and found it behaved differently in response to a hint without mentioning the hint in its reasoning. The model appears to construct a reasonable-sounding narrative after the fact, not a lie, but not the window into a blackbox that COT was being protrayed to be.
 
-Most of my career, even the parts that don't look like data science on paper, has involved the same question: is this system actually doing what we think it's doing, and what happens to the person it gets wrong about? I'd like to keep asking that question somewhere it can do some good.
+Most of my career, even the parts that don't look like data science on paper, has involved the same question: is this system actually doing what we think it's doing, and what happens to the real person when the system gets it wrong? I'd like to keep asking that question somewhere it can do some good.
 
-I work best on problems that don't have a clean answer yet, with people who'll tell me honestly when I've got something wrong. I'd rather be somewhere people disagree productively and push things forwards, than somewhere everyone nods along. I'm told I ask a lot of questions. I'd call it thoroughness.
+I work best on problems that don't have a clean answer yet, with people who like to talk about the details. I'd rather be somewhere people disagree productively and push things forwards, than somewhere everyone nods along without challenging assumptions. 
 
 ## Education
 
@@ -45,9 +45,9 @@ I work best on problems that don't have a clean answer yet, with people who'll t
 
 ## Key Skills
 
-**Technical:** Python, R, SQL, machine learning, statistical analysis, Git, Docker, Singularity, Linux, HPC/Slurm, data pipelines, data wrangling, model evaluation, visualisation
+**Technical:** Python, R, SQL, machine learning, statistical analysis, Git, Docker, Singularity, Linux, HPC/Slurm, data pipelines, data wrangling, model evaluation, visualisation, LLMs, NLP, LaTex
 
-**Professional:** Teaching, technical communication, stakeholder collaboration, problem-solving, process improvement
+**Professional:** Teaching, technical communication, problem-solving, process improvement, details, critical thinking, being a good human,
 
 ## Experience
 

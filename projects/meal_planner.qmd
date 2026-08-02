@@ -26,7 +26,7 @@ There are 2 versions, the first is a fixed version that is publically available,
 
 ## Status
 
-Working, but not perfect and I'd like to mess with it further someday.
+Working, but not as perfect as I'd like  and I'd like to mess with it further someday.
 
 Working version of the fixed system: [Streamlit App](sannakatemealplanner.streamlit.app)
 

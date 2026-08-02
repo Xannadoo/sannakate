@@ -4,17 +4,18 @@ title: "Tefr Glyphs"
 
 ## Overview
 
-Tefr's enchanting system is glyph-based, where a character learns glyphs, and then whatever spells they can 'spell' with the glyphs they know. There are over 800 spells, so memorising them all is a challenge to both scenerio writers and players (although few players would ever know so many).
+Tefr's enchanting system is glyph-based, where a character learns glyphs, and then whatever spells they can 'spell' with the glyphs they know. There are over 800 spells, so memorising them all is a challenge to both scenerio writers and players (although few players would ever know so many). 
+In discussion with the author [Simon Cornish](https://simoncornish.com), he suggested that a spell checker would be particularly useful for scenerio writers who need to know what spells their NPCs know, especially as a player can request to be taught a combination from a suitably skilled NPC.
 
-On the tech side, the codex pdf presented a challenge as the layout is artistic rather than being an easily parsable list of spells. The spells were extracted from the pdf, cleaned, and then stored in a database for searching.
+On the tech side, the codex pdf presented a challenge as the layout is *artistic* rather than being an easily parsable list of spells. The spells were extracted from the pdf, cleaned, and then stored in a database for easy searching and retrieval. The relatively small number of glyphs (around 30) means that a simple search can be done in real time, and the results are displayed in a simple web app. Some glyphs are learned together, and the app selects them as such. The spells themselves still list the individual glyphs separately.
 
 ## Approach
 
 ### Spells
 
-The spells were scraped from the Enchanter's Codex, beta 1.7, and then cleaned and processed before being extracted. It is believed that there should be 815 spells, but only 811 were recovered. If errors are found, please let me know so this can be improved!
+The spells were scraped from the Enchanter's Codex, beta 1.7, and then cleaned and processed before being extracted. It is believed that there should be 815 spells, but only 811 were recovered. If you find one that is missing, please let me know and I can dig into why the extraction missed it.
 
-### Glyph notes
+#### Glyph notes
 
 Some glyphs are learned together and the app selects them as such:
 
@@ -26,3 +27,4 @@ Selecting one of those glyphs selects the whole learning group, but the spells t
 ## Status
 
 Complete:  [Streamlit App](https://tefrglyphs.streamlit.app) or on [Tefr.com](https://tefr.com/Glyphy/)
+Some quirks remain in the formatting of some spells as this is based of a beta version of the codex and there are some inconsistencies and typos remaining, which should be fixed in the next version of the codex. The app will be updated when that is released.

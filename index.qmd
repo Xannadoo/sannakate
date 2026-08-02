@@ -1,21 +1,22 @@
 ---
 title: "Hi, I'm Chrisanna 💗"
 ---
-![](images/FairySanna2.jpg){.title-page-photo}
+![](images/FairySanna2_crop.jpg){.title-page-photo}
 
-I care about whether the systems we build actually do what we think they do, and whether we should be building them at all.
- 
-My MSc thesis, published in the ACL Anthology, examined whether DeepSeek R1's chain-of-thought reasoning faithfully reflects its internal process, or whether it's largely a rationalisation after the fact. My BSc thesis found that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI.
- 
-Whilst studying, I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics; helping students think critically about not just how to build models, but when and whether to. A model trained on biased data propagates that bias; deciding how to handle that should be a conscious choice. We should be making the world better, not accidentally adding to the chaos.
- 
-Before data science I spent over a decade in healthcare, local government, and retail. Those roles gave me a grounded sense of what systems look like from the inside, and who gets left behind when they break.
- 
-I show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends. A lot of my work, in different forms, has been about making sure people have what they need to make real choices; I helped coordinate one of the first community food networks during the COVID-19 lockdown, and volunteered as a peer supporter for new mothers through Sure Start. Noticing people and not walking past is part of how I approach data work too.
- 
-I passed my Danish PD3 exam, have permanent residency, and my kids still say I sound mærkeligt.
+I trained as a nurse, ran a cash office, processed council payments, and eventually ended up in data science, which sounds like a strange route until you notice all four jobs were really the same job: finding the thing that doesn't add up and working out why. I have two daughters, a partner, and a habit of making things (bread, jumpers, occasionally a roundhouse) that I've never quite managed to train out of myself.
+
+These days that "finding the thing that doesn't add up" habit is aimed at AI systems, specifically whether they do what we think they do, and whether we should be building them in the first place. My MSc thesis (published in the ACL Anthology) asked whether DeepSeek R1's chain-of-thought reasoning is an honest account of what the model is doing, or just a plausible story it tells afterwards. Spoiler: mostly the latter. My BSc thesis worked out that the carbon cost of a single medical imaging ML competition was roughly equivalent to sending William Shatner to space twice. That was before generative AI made everything worse.
+
+Whilst studying I was a teaching assistant at ITU Copenhagen, including on the MSc course in Algorithmic Fairness, Accountability and Ethics. Mostly that meant helping students think about not just how to build a model, but when and whether to. A model trained on biased data won't magically be unbiased. Someone has to decide what to do about that, and I'd rather more people were equipped to make that call properly.
+
+Before data science I spent over a decade in healthcare, local government, and retail. None of it looked like data science at the time. All of it was, really: tracking down discrepancies, keeping records straight under pressure, noticing when numbers that were supposed to add up didn't.
+
+I show people I care by making things: clothes for my kids, cookies for the office, the occasional roundhouse with friends (I nearly fell off that one, in my defence I found out shortly after I was 20 weeks pregnant at the time). A lot of my work outside data science has quietly been about the same thing, making sure people have what they need to make real choices. I helped coordinate a community response team during the first COVID lockdown, and volunteered as a peer supporter for new mothers. Noticing people and not walking past them is part of how I approach data work too, it's just less obvious from the outside.
+
+I passed my Danish PD3 exam in 2024, have permanent residency, and my daughters remain entirely unimpressed by my accent. They tell me I still sound *mærkeligt*, and they're probably right.
 
 I'm currently looking for data science and research-focused roles in the Copenhagen area.
+
 
 - [View my CV](cv.qmd)
 - [See my projects](projects/index.qmd)

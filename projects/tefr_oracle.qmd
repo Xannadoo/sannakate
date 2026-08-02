@@ -1,0 +1,32 @@
+---
+title: "Tefr Oracle"
+---
+
+
+## Overview
+
+Tefr's rulebooks are dense and split across several chapters, which makes them slow to search by hand, especially for scenario writers who need a quick, precise answer buried somewhere in the Healing chapter or the Credo, or new (or experienced!) GMs in the middle of a session. This project aims to turn the rulebook PDF into a natural-language-queryable knowledge base: a Retrieval-Augmented Generation (RAG) system that lets you ask a question in plain English and get back the relevant rule, spell, or lore passage.
+
+On the tech side, the challenge is similar in spirit to the Glyphs project but harder: the source PDFs use a two-column artistic layout, mix prose with structured entries (plants, potions, spells), and vary in structure from chapter to chapter. Rather than one generic parser, the pipeline separates *parsing* (PDF → clean markdown) from *chunking* (markdown → structured, searchable pieces), with chapter-specific logic where the content demands it.
+
+## Approach
+
+### Parsing
+
+Each chapter PDF is run through a parser built on `pymupdf`, with a local vision model (`minicpm-v`, via Ollama) as a fallback for image-heavy pages. The two-column layout used throughout the rulebooks required custom detection logic, clustering text blocks by their x-coordinates to correctly reconstruct reading order.
+
+### Chunking
+
+A generic chunker handles chapters that are mostly prose and headings, splitting them into story, rules, and spell chunks. Spell entries are parsed into structured metadata: glyph names, glyph combinations, translations, duration, and range — so the resulting database can answer both "what can I do with glyph X" and "what does combination Y do."
+
+Some chapters need their own logic. The Healing chapter, for example, mixes plant entries, potion entries (grouped by skill level), and rules prose in a layout where the two-column interleaving makes naive entry-detection unreliable. A specialist chunker was written for it, using blank-line boundaries to detect entries rather than lookahead, which was misreading interleaved prose as false entry names.
+
+Every chunker, generic or specialist, outputs to the same JSONL format, so chapter-specific parsing quirks stay contained without breaking the rest of the pipeline.
+
+### Retrieval
+
+Decisions still to be made here...
+
+## Status
+
+In progress. Parsing and chunking are working for most chapters, with per-chapter chunkers being written as needed (Healing is done; Credo is next). Once all chapters are chunked, the next step is loading everything into a vector database to make it queryable.

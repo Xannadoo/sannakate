@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Meal Planner – Sannakate</title>
+<title>job-tailor: a locally-run CV tailoring pipeline – Sannakate</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Meal Planner</h1>
+<h1 class="title">job-tailor: a locally-run CV tailoring pipeline</h1>
 </div>
 
 
@@ -143,32 +143,59 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>I built a meal planning system for my family. It scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety (because despite what my kids might want, we are <em>not</em> eating pasta every night!).</p>
-<p>I wanted to show that I could take a project from idea to implementation,and make something that was useful to me (and maybe others!). I wanted to combine a few different skills: web scraping, LLMs, and building a simple UI so it was accessable to others. In particular, I wanted to see if I could use a local LLM to tag recipes in a way that was useful for meal planning, and to see if I could get it to do that without sending any data to the cloud.</p>
+<p>job-tailor is a small, locally-run pipeline that takes a job advert and a “master document” of my own career history, personal details and stories, and produces a tailored CV profile paragraph, checked for factual accuracy before I ever see it as a finished draft. I built it for two overlapping reasons: I needed a genuinely useful tool for my own job search, and I wanted a project that would let me demonstrate agentic AI system design rather than just describe it on a CV.</p>
+<p>It’s deliberately scoped as a proof of concept. It does not search for jobs, submit applications, or manage the wider job hunt: it does one step, tailoring, and does it carefully. I’d rather create something narrow that works reliably and that I can honestly describe than something broader that half-works and requires generous framing to call “agentic.”</p>
+<p>The whole thing runs on a free, fully local stack: a 14B parameter open-weight model (qwen2.5-coder:14b) served through Ollama on a household machine, accessed via a LiteLLM proxy. No API costs, no data leaving the house.</p>
 </section>
 <section id="approach" class="level2">
 <h2 class="anchored" data-anchor-id="approach">Approach</h2>
-<p>I built this with “future me” in mind. Looking out for the part of the system that is small now but could cause a problem later:</p>
-<ul>
-<li>Tuneable config: All weights, thresholds, and site-specific rules (anything I might want to mess around with at 3am when it occurs to me!) live in a config.yaml.</li>
-<li>Data led: My first attempt at calculating ease felt off. Looking at the actual distributions for cooking and prep times showed me why, and the curves were fitted to what was actually there.</li>
-<li>Data cleaning: Actually one of my favourite parts of a project. Getting the scraped data from different sites into a consistent format, no sneaky HTML tags hiding to mess things up later. Formatting well from the start saves fussing and fixing later.</li>
-</ul>
-<p>There are 2 versions, the first is a fixed version that is publically available, the second is a more flexible version that can be run locally. This version can be customised with recipes, family names and individual ratings for each recipe.</p>
+<p>The pipeline is built as a sequence of stages, each one a single LLM call with a tightly scoped job, plus one stage that is deliberately not an LLM call at all.</p>
+<section id="stage-1-fit-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="stage-1-fit-analysis">Stage 1: fit analysis</h3>
+<p>Given the job advert and my master document, this stage identifies the handful of requirements that matter most for the role, finds concrete matching evidence for each (not vague summaries, actual facts from the document), and is explicit about genuine gaps. I want the gaps stated plainly here, because this stage is for my own planning, not for anyone else to see.</p>
 </section>
-<section id="tools" class="level2">
-<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<section id="stage-2-draft-profile" class="level3">
+<h3 class="anchored" data-anchor-id="stage-2-draft-profile">Stage 2: draft profile</h3>
+<p>Using the fit analysis to decide what to lead with, this stage drafts the actual CV profile paragraph, under a fairly strict style brief (UK spelling, no daft padding phrases like “passionate about” or “leveraging my expertise”, specific over general, written the way I’d actually actually say it rather than the way LinkedIn seems to be making us all sound the same).</p>
+</section>
+<section id="stage-3-independent-fact-check" class="level3">
+<h3 class="anchored" data-anchor-id="stage-3-independent-fact-check">Stage 3: independent fact-check</h3>
+<p>This is the stage I think matters most, and it’s built around a specific design choice: the fact-checker never sees the job advert. It only sees the master document and the draft profile, and checks every claim in the draft against the source.</p>
+<p>This asymmetry is deliberate. The most common and most dangerous failure I saw in early testing wasn’t the model inventing things out of nowhere, it was the model echoing terminology from the job advert back as if it were my own experience, because that terminology was sitting right there in context alongside my real background. Telling the model “don’t do this” in a prompt was a much weaker fix than simply not giving it the opportunity: if the fact-checker has never seen the job ad’s wishlist, it has no vocabulary to fabricate from. Removing visibility structurally turned out to be a far more robust fix than any instruction-level guardrail I tried.</p>
+<p>The fact-checker also has to handle a distinction I hadn’t fully appreciated going in: not every kind of claim needs the same evidentiary bar. A claim like “confident with Python” is either traceable to the source document or it isn’t, full stop. A claim like “strong work ethic” will almost never be stated in those words anywhere in a career history; the honest question for that kind of claim isn’t “is this written down” but “is this a reasonable reading of an actual pattern in the document.” Applying the hard-evidence standard to soft character claims produced false flags on things that were genuinely true; applying the soft character claims produced false flags on things that were genuinely true; applying the soft standard to technical claims let fabrications through. Both bars needed to exist, and the checker needed to know which one applied to which sentence.</p>
+<p>One more thing this stage protects deliberately: honest gap disclosures. If the draft says something like “despite limited exposure to X,” that’s a feature, not an error, and the fact-checker is explicitly told never to flag or “correct away” a stated absence of a skill. Losing that distinction would make the tool actively dishonest in the direction of overclaiming, which is the opposite of what it’s for.</p>
+</section>
+<section id="handling-dates-without-asking-the-model-to-do-arithmetic" class="level3">
+<h3 class="anchored" data-anchor-id="handling-dates-without-asking-the-model-to-do-arithmetic">Handling dates without asking the model to do arithmetic</h3>
+<p>Early on, date handling was the single most persistent source of failures, not close calls, but confidently wrong answers, like miscalculating a role spanning January 2023 to June 2025 as four years. No amount of prompt refinement made this reliable, because date arithmetic isn’t the kind of task an LLM is well suited to in the first place, especially a smaller model.</p>
+<p>The fix was to stop asking. A small deterministic Python module parses every date range out of the master document, computes whether each role or qualification is finished or ongoing relative to today, and calculates duration, all before the model ever sees a prompt. The prompts are then given these facts as pre-computed statements (“finished, duration 2.4 years”) with explicit instructions not to recompute or second-guess them. The model’s job changed from “do the arithmetic” to “use the answer you’ve been given,” which is a much better match for what the model is actually capable of.</p>
+</section>
+<section id="in-progress-an-adversarial-critic-loop" class="level3">
+<h3 class="anchored" data-anchor-id="in-progress-an-adversarial-critic-loop">In progress: an adversarial critic loop</h3>
+<p>The current focus is the piece that will make this genuinely agentic rather than a linear checklist of LLM calls: a critic stage that reviews the draft against the job advert (this one <em>is</em> allowed to see the job ad, on purpose, its job is competitiveness, not accuracy) and raises structured flags against anything that weakens the application.</p>
+<p>Flags fall into four categories: missing evidence for a claim, framing that undersells real experience, a genuine gap I just don’t have, and an outright mismatch with what the role wants. The category that took the most thought was genuine gaps: flags in that category are hard-coded to never carry a suggested fix, because the alternative, letting the critic suggest “better wording” for something that isn’t there, is just a polite way of asking the model to make stuff up. If there’s no honest way to close a gap through writing, the tool should say so and stop, not paper over it.</p>
+<p>The critic and the fact-checker are deliberately asymmetric (one sighted on the job ad, one blind to it), and the loop control between them, how many rounds run, when a flag counts as resolved, what happens when the two disagree, lives in ordinary code rather than in the model. I’d rather have a boring, predictable convergence rule than trust the model to decide when it’s “done.” Where the fact-checker and critic disagree, the fact-checker wins the tie, since accuracy takes precedence over competitiveness. Convergence is also tracked per flag rather than for the draft as a whole, with an explicit “flagged for review” status for anything that doesn’t resolve cleanly after a few rounds so the goal is bounded, sensible effort, not forcing every flag closed by construction.</p>
+<section id="a-note-on-validating-structured-output" class="level4">
+<h4 class="anchored" data-anchor-id="a-note-on-validating-structured-output">A note on validating structured output</h4>
+<p>Before building the loop driver itself, I wrote a small standalone script whose only job is confirming the critic reliably returns valid, well-formed JSON in the flag schema I need, independent of the rest of the pipeline. It’s a deliberately unglamorous piece of infrastructure, but structured-output reliability is exactly the kind of thing that’s easy to assume works and expensive to discover doesn’t, three layers up.</p>
+</section>
+</section>
+<section id="on-the-failure-log" class="level3">
+<h3 class="anchored" data-anchor-id="on-the-failure-log">On the failure log</h3>
+<p>Alongside the code, I’ve kept a running log of every distinct bug I hit while building this, currently at a douzen entries. I’ve come to think of this as part of the project’s actual output, not just development scaffolding. The interesting failure mode with LLM pipelines isn’t the model crashing or refusing; it’s the model producing something fluent and <strong>confident and wrong</strong>, which looks exactly like success until you check it carefully. A log of specific, named ways that happened (and what structural or code-level fix actually closed each one, as opposed to a prompt tweak that just moved the problem) is a more honest demonstration of what building this kind of system involves than a clean success story would be. I also find this fun and the most interesting part, models behave the way they do because of their training, they are not ‘trying’ to be dishonest, that acribes an intention to a system that has none, but the way they behave is still a real-world problem that can be worked with.</p>
+</section>
+</section>
+<section id="future-plans" class="level2">
+<h2 class="anchored" data-anchor-id="future-plans">Future plans</h2>
 <ul>
-<li>Selenium and BeautifulSoup for scraping</li>
-<li>Ollama running Qwen2.5:7b for tagging</li>
-<li>Streamlit for the UI.</li>
+<li><strong>Model comparison.</strong> Empirically test a few larger open-weight models (32B-class) on the same household hardware before committing to a change, and as this would be too large to sit entirely on the GPU, whether the performance trade-off is worth it.</li>
+<li><strong>Style critique pass</strong> and <strong>LaTeX integration</strong> for a polished final output, once the critic loop is solid.</li>
+<li><strong>A controlled framing experiment.</strong> Run the same master document through the pipeline with only the name and pronouns swapped, and diff the outputs for subtle shifts in language, for instance, whether achievements get framed with agentic verbs (“led”, “managed”) versus more collaborative ones (“helped”, “supported”) depending on the name attached. This is framed deliberately as a side experiment using the pipeline as an instrument, not as a feature of the tool itself, and any findings would be specific to this one model rather than a general claim. This is mostly for my own curiousity and it connects to a research interest of mine from my master’s thesis, which looked at whether a model’s stated reasoning actually reflects what’s driving its output, this would be a small, concrete instance of the same underlying question: what’s actually driving the model’s word choices, versus what it would say if asked to explain them.</li>
 </ul>
 </section>
 <section id="status" class="level2">
 <h2 class="anchored" data-anchor-id="status">Status</h2>
-<p>Working, but not as perfect as I’d like and I’d like to mess with it further someday.</p>
-<p>Working version of the fixed system: <a href="sannakatemealplanner.streamlit.app">Streamlit App</a></p>
-<p>Cloneable repo with the code and instructions for running it locally: <a href="https://github.com/Xannadoo/web_recipes">GitHub</a></p>
+<p>The core three-stage pipeline (fit analysis, draft profile, fact-check) is built and running end-to-end on the local stack. The date-handling module is complete and independently tested. The critic stage’s prompt and data model are written and its JSON output has been validated in isolation; the loop driver that ties it into the rest of the pipeline is the current work in progress.</p>
 
 
 </section>

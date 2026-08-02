@@ -143,17 +143,16 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Tefr’s enchanting system is glyph-based, where a character learns glyphs, and then whatever spells they can ‘spell’ with the glyphs they know. There are over 800 spells, so memorising them all is a challenge to both scenerio writers and players (although few players would ever know so many).</p>
-<p>On the tech side, the codex pdf presented a challenge as the layout is artistic rather than being an easily parsable list of spells. The spells were extracted from the pdf, cleaned, and then stored in a database for searching.</p>
+<p>Tefr’s enchanting system is glyph-based, where a character learns glyphs, and then whatever spells they can ‘spell’ with the glyphs they know. There are over 800 spells, so memorising them all is a challenge to both scenerio writers and players (although few players would ever know so many). In discussion with the author <a href="https://simoncornish.com">Simon Cornish</a>, he suggested that a spell checker would be particularly useful for scenerio writers who need to know what spells their NPCs know, especially as a player can request to be taught a combination from a suitably skilled NPC.</p>
+<p>On the tech side, the codex pdf presented a challenge as the layout is <em>artistic</em> rather than being an easily parsable list of spells. The spells were extracted from the pdf, cleaned, and then stored in a database for easy searching and retrieval. The relatively small number of glyphs (around 30) means that a simple search can be done in real time, and the results are displayed in a simple web app. Some glyphs are learned together, and the app selects them as such. The spells themselves still list the individual glyphs separately.</p>
 </section>
 <section id="approach" class="level2">
 <h2 class="anchored" data-anchor-id="approach">Approach</h2>
 <section id="spells" class="level3">
 <h3 class="anchored" data-anchor-id="spells">Spells</h3>
-<p>The spells were scraped from the Enchanter’s Codex, beta 1.7, and then cleaned and processed before being extracted. It is believed that there should be 815 spells, but only 811 were recovered. If errors are found, please let me know so this can be improved!</p>
-</section>
-<section id="glyph-notes" class="level3">
-<h3 class="anchored" data-anchor-id="glyph-notes">Glyph notes</h3>
+<p>The spells were scraped from the Enchanter’s Codex, beta 1.7, and then cleaned and processed before being extracted. It is believed that there should be 815 spells, but only 811 were recovered. If you find one that is missing, please let me know and I can dig into why the extraction missed it.</p>
+<section id="glyph-notes" class="level4">
+<h4 class="anchored" data-anchor-id="glyph-notes">Glyph notes</h4>
 <p>Some glyphs are learned together and the app selects them as such:</p>
 <ul>
 <li><code>Evu</code> and <code>Sen</code></li>
@@ -162,9 +161,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Selecting one of those glyphs selects the whole learning group, but the spells themselves still list the individual glyphs separately.</p>
 </section>
 </section>
+</section>
 <section id="status" class="level2">
 <h2 class="anchored" data-anchor-id="status">Status</h2>
-<p>Complete: <a href="https://tefrglyphs.streamlit.app">Streamlit App</a> or on <a href="https://tefr.com/Glyphy/">Tefr.com</a></p>
+<p>Complete: <a href="https://tefrglyphs.streamlit.app">Streamlit App</a> or on <a href="https://tefr.com/Glyphy/">Tefr.com</a> Some quirks remain in the formatting of some spells as this is based of a beta version of the codex and there are some inconsistencies and typos remaining, which should be fixed in the next version of the codex. The app will be updated when that is released.</p>
 
 
 </section>
@@ -243,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/sannakate\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
