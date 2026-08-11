@@ -1,7 +1,11 @@
 /*-- scss:defaults --*/
-$primary: #b9aae8;
-$body-bg: #e7e5ed;
-$font-family-base: 'Ysabeau Office', serif;
+$primary: #afd5da;
+$body-bg: #d1e1e3;
+
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+$font-family-base: 'Ysabeau Office', sans-serif;
+$headings-font-family: 'Ysabeau Office', sans-serif;
 
 /*-- scss:rules --*/
 .navbar {

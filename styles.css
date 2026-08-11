@@ -13,13 +13,17 @@
     [screen-end];
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap');
-
-
-body {
-  font-family: 'Ysabeau Office', sans-serif;
+a {
+  color: #1a4d8f;
 }
 
+a:hover {
+  color: #123866;
+  text-decoration: underline;
+}
+.navbar {
+  border-bottom: 2px solid #345a73;
+}
 .navbar-title {
   font-weight: 600;
 }
