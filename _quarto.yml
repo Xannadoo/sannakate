@@ -12,6 +12,8 @@ website:
         text: CV
       - href: projects/index.qmd
         text: Projects
+      - href: notes/index.qmd
+        text: Notes
 
 format:
   html:
