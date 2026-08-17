@@ -1,0 +1,30 @@
+---
+title: "Carbon Footprint of ML Competitions"
+---
+
+## Overview
+
+For my BSc thesis, my project partner Danielle Marie Dequin and I attempted to calculate the carbon footprint of an entire Kaggle machine learning competition, rather than just a single trained model. Kaggle competitions on medical imaging can attract tens of thousands of submissions, each representing a model being trained, and existing carbon footprint research only looked at individual models rather than the competition as a whole.
+
+We wanted to quantify what that adds up to, and to weigh it against a finding from prior research that competition winners often don't actually outperform other entrants by a meaningful margin once you account for evaluation noise. If a competition produces thousands of models with diminishing returns, the carbon cost of running it starts to look like a real question worth asking.
+
+## Approach
+
+### Estimating the cost
+
+We picked the SIIM-FISABIO-RSNA COVID-19 Detection competition on Kaggle, since it had public code and had already been studied for diminishing returns by other researchers. We reproduced the training of eleven models (an NFNet ensemble from the 2nd place team, plus ten ResNet50 models from related transfer-learning research) using CarbonTracker to measure their carbon cost, then used the range of per-model costs to extrapolate a lower and upper bound for the whole competition based on its ~32,000 submissions.
+
+### What we found
+
+- The competition's estimated footprint ranged from 50,262g to 182,656,518g CO2, a huge range, but even the upper bound alone is more than the emissions of sending two people to space (this is where the "sending Shatner to space" comparison came from as he'd not long returned from the Blue Origin flight).
+- We also tracked our own research's carbon cost, which came to 3,100g CO2, almost double what it could have been if we hadn't needed to re-run failed training attempts.
+- Beyond the numbers, we ran into serious reproducibility problems: only 19 of 1,305 teams had usable public code, and even the best of those had broken repository branches, missing dependencies, and undocumented parameters. This mattered for our own estimate, but also for whether any of these "winning" solutions could realistically be deployed in a clinical setting.
+- We also found that code competitions marketed as "balanced" (same hardware, same compute limits) weren't in practice. Top teams trained externally and just uploaded final weights, comfortably bypassing the competition's own runtime limits.
+
+## Status
+
+Completed as our BSc thesis for the Data Science BSc, IT University of Copenhagen, supervised by Veronika Cheplygina.
+
+Code and data: [GitHub](https://github.com/carbonCostKaggle)
+
+Paper: [PDF](/projects/files/carbon_footprint_ml_competitions.pdf)

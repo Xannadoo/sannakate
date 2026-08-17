@@ -1,0 +1,36 @@
+---
+title: "Comparison Reasoning in LLMs"
+---
+
+
+## Overview
+
+I investigated whether an LLM actually reasons through comparison questions ("who was born earlier, X or Y?") or just pattern-matches its way to the right answer. This followed on from Ray Choudhury et al.'s (2022) framework for testing reasoning in BERT-style models, applying it instead to a generative model, OLMo 7B 0724 Instruct.
+
+I used two independent tests. First, counterfactual questions: I took comparison questions from HotpotQA and 2WikiMultihopQA and flipped the comparison term (earlier → later, older → younger, etc.), swapping the expected answer accordingly. A model that's actually reasoning should be able to get both the original and the flipped version right, since neither should be harder than the other for a competent human. Second, saliency: using Integrated Gradients, I checked whether the model was paying attention to the tokens a human would consider relevant (the comparison word itself), rather than something else entirely.
+
+## Approach
+
+### Counterfactual questions
+
+Around 9.6K question pairs were built by using _Named Entity Recognition_ to isolate questions with exactly two named entities and one of six comparison terms, then generating a perturbed counterpart for each. The model was scored as correct only if it got *both* versions of a pair right.
+
+### Saliency with Integrated Gradients
+
+For the questions where I could get saliency scores, I split each question into two partitions: the comparison term itself (positive) and everything else in the question except the two entities (negative). A model reasoning as expected should weigh the positive partition higher than the negative.
+
+#### What I found
+
+- The model got both questions in a pair right only 32.6% of the time.
+- When it failed, in 78% of cases it gave the same answer to both questions, typically being correct for the original wording, suggesting it was pattern-matching on phrasing rather than resolving the comparison itself.
+- The saliency scores told a similar story: the model's "important" tokens barely tracked the ones a human would flag, and there was very little overlap between the two tests overall (alignment between "correct answer" and "correct attention" was as low as 6.8% when requiring both).
+
+## Status
+
+This began as a small research project as part of my MSc coursework, building on the framework from Ray Choudhury et al. (2022) and findings from Nikankin et al. (2024) that LLMs tend to rely on a "bag of heuristics" for reasoning tasks. It formed a loose jumping-off point for my later thesis, which focused on the broader question of faithfulness and evaluation of reasoning in LLMs, both supervised by Anna Rogers at ITU Copenhagen. 
+
+The code and data are available on GitHub, and a paper is available as a PDF below 😊
+
+Code: [GitHub](https://github.com/Xannadoo/comparision-reasoning-skills-llm)
+
+Paper: [PDF](/projects/resources/olmo_comparison_reasoning.pdf)

@@ -135,6 +135,11 @@ a:hover {
   color: #4b0082;
 }
 
+.badge-type-published {
+  background: #f0caf1;
+  color: #450237;
+}
+
 .badge-type-personal {
   background: #e0f4ea;
   color: #1a7a4c;

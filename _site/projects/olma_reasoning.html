@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – Sannakate</title>
+<title>Comparison Reasoning in LLMs – Sannakate</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
+    <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Comparison Reasoning in LLMs</h1>
 </div>
 
 
@@ -145,215 +145,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="project-filters" id="project-filters"></div>
-<div class="project-grid" id="project-grid">
-
-  <div class="project-card" data-type="personal" data-status="completed" data-tags="Python, web scraping, LLM, UI/UX">
-    <h3 class="anchored">Meal Planner</h3>
-    <div class="badge-row">
-      <span class="badge badge-type-personal">Personal Project</span>
-      <span class="badge badge-status-complete">Completed</span>
-    </div>
-    <div class="date-tags">July 2026</div>
-    <div class="skill-tags">LLM · web scraping · data processing · UI/UX</div>
-    <p>A meal planning system, it scrapes recipes from the web, uses a local LLM to tag them, scales portions, and generates a weekly plan that tries to balance season, effort and variety.</p>
-    <details>
-      <summary>Details</summary>
-      <p>Solving a niggle, 500 recipes were scraped from the web, processed, tagged using a locally-hosted LLM, and a weekly plan can then be generated with regards to season, effort, diet requirements, etc. A local version is also available that allows users to customise for the size of their household, and rate recipes (per individual).</p>
-      <a href="../projects/meal_planner.html">Read more here</a>
-    </details>
-  </div>
-
-  <div class="project-card" data-type="personal" data-status="completed" data-tags="Python, NLP, UI/UX">
-    <h3 class="anchored">Tefr Glyph Spell Checker</h3>
-    <div class="badge-row">
-      <span class="badge badge-type-personal">Personal Project</span>
-      <span class="badge badge-status-complete">Completed</span>
-    </div>
-    <div class="date-tags">July 2026</div>
-    <div class="skill-tags">Python · NLP · UI/UX</div>
-    <p>A project that took the enchanters codex from Tefr RPG, and allows you to search for possible spells from known glyphs.</p>
-    <details>
-      <summary>Details</summary>
-      <p>Tefr's enchanting system uses a glyph-based approach. Characters learn glyphs, and combine them to create spells. With over 800 known spells, this is a lot to remember so this project helps users find valid combinations.
-        This was an offshoot of the Tefr Oracle project, which is still in progress.</p>
-      <p></p>
-      <a href="../projects/tefr_glyphs.html">Read more here</a>
-    </details>
-  </div>
-
-  <div class="project-card" data-type="personal" data-status="in progress" data-tags="R, Statistics">
-    <h3 class="anchored">Referee Bias Analysis</h3>
-    <div class="badge-row">
-      <span class="badge badge-type-personal">Personal Project</span>
-      <span class="badge badge-status-progress">In progress</span>
-    </div>
-    <div class="date-tags">June 2026</div>
-    <div class="skill-tags">R · GLM/GLMM · Statistical modelling</div>
-    <p>Examining whether football referees issue red cards at different rates depending on players' skin tone, using the Crowdstorming dataset.</p>
-    <details>
-      <summary>Details</summary>
-      <p>Built three increasingly complex GLM/GLMM models to test whether the effect held up as model complexity increased. Used as a refresher project for R after several years working mainly in Python. Next step is extending the analysis to yellow cards as an outcome variable.</p>
-      <a href="../projects/crowdstorming.html">Read more here</a>
-    </details>
-  </div>
-
-  <div class="project-card" data-type="personal" data-status="in progress" data-tags="Python, LLM, Agentic AI">
-    <h3 class="anchored">Job Tailor</h3>
-    <div class="badge-row">
-      <span class="badge badge-type-personal">Personal Project</span>
-      <span class="badge badge-status-progress">In progress</span>
-    </div>
-    <div class="date-tags">June 2026</div>
-    <div class="skill-tags">Python · Large Language Models · Agentic AI</div>
-    <p>Personalised agentic system for tailoring job applications to specific roles.</p>
-    <details>
-      <summary>Details</summary>
-      <p>A local, privacy-first pipeline that tailors a CV profile to a specific job advert, with an independent fact-checking stage built to catch fabricated claims before they reach a real application. Runs entirely on open-weight models via Ollama, so no API costs or external data sharing. Currently building out an adversarial critic loop to flag weak framing and genuine gaps, alongside the fact-checker.</p>
-      <p></p>
-      <a href="../projects/job_tailor.html">Read more here</a>
-    </details>
-  </div>
-
-  <div class="project-card" data-type="personal" data-status="in progress" data-tags="Python, NLP, LLM, RAG">
-    <h3 class="anchored">Tefr Oracle</h3>
-    <div class="badge-row">
-      <span class="badge badge-type-personal">Personal Project</span>
-      <span class="badge badge-status-progress">In progress</span>
-    </div>
-    <div class="date-tags">May 2026</div>
-    <div class="skill-tags">Large Language Models · Natural Language Processing · Retrieval-Augmented Generation · Python · Data Processing</div>
-    <p>Natural language query system for the Tefr RPG rule system.</p>
-    <details>
-      <summary>Details</summary>
-      <p>Work in progress... Currently deciding how to process the complex pdf documents into meaningful chunks as naive chunking strategies are not sufficient.
-        The goal is to allow users to ask questions about the Tefr RPG rule system in natural language, and have the system return natural language answers, and reference the rule book. This will be done using a combination of retrieval-augmented generation and a locally hosted large language model to respect the intellectual property of the author.</p>
-      <p></p>
-      <a href="../projects/tefr_oracle.html">Read more here</a>
-    </details>
-  </div>
-
-  <div class="project-card" data-type="research" data-status="completed" data-tags="Python, LLM, Statistics">
-    <h3 class="anchored">Chain-of-Thought Faithfulness</h3>
-    <div class="badge-row">
-      <span class="badge badge-type-research">Research</span>
-      <span class="badge badge-status-complete">Complete</span>
-      <span class="badge badge-type-published">Published ⭐</span>
-    </div>
-    <div class="date-tags">Sept 2025</div>
-    <div class="skill-tags">Python · LLM evaluation · Statistical analysis</div>
-    <p>MSc thesis examining whether DeepSeek R1's stated reasoning actually reflects the factors driving its answers.</p>
-    <details>
-      <summary>Details</summary>
-      <p>We found that the model changed its behaviour in response to a hint embedded in the prompt, without referencing that hint anywhere in its chain-of-thought. This implies that the COT is not a faithful representation of the underlying reasoning but would be better considered a post-hoc explaination. Published in the ACL Anthology as part of IJCNLP-AACL 2025, CHOMPS workshop.</p>
-      <a href="https://aclanthology.org/2025.chomps-main.2/" target="_blank">Read the paper →</a>
-    </details>
-  </div>
-
-  <div class="project-card" data-type="research" data-status="completed" data-tags="Python, LLM, Reasoning">
-    <h3 class="anchored">Comparison Reasoning in LLMs</h3>
-    <div class="badge-row">
-      <span class="badge badge-type-research">Research</span>
-      <span class="badge badge-status-complete">Complete</span>
-    </div>
-    <div class="date-tags">Jan 2025</div>
-    <div class="skill-tags">Python · LLM evaluation · Comparison reasoning · Saliency analysis</div>
-    <p>MSc research project examining comparison reasoning in OLMo.</p>
-    <details>
-      <summary>Details</summary>
-      <p>I investigated whether OLMo actually reasons through comparison questions ("who was born earlier, X or Y?") or relies on pattern-matching to get the right answer, using saliency analysis and counterfactual testing. The results found that the model often failed to reason correctly through these questions, and showed limited attention to the relevant tokens.</p>
-      <a href="../projects/olmo_reasoning.html">Read more here</a>
-    </details>
-  </div>
-
-  <div class="project-card" data-type="research" data-status="completed" data-tags="Python, Image Analysis, Carbon Cost">
-    <h3 class="anchored">Carbon Cost of ML Image Competitions</h3>
-    <div class="badge-row">
-      <span class="badge badge-type-research">Research</span>
-      <span class="badge badge-status-complete">Complete</span>
-    </div>
-    <div class="date-tags">Jun 2023</div>
-    <div class="skill-tags">Python · Image Analysis · Carbon Cost</div>
-    <p>BSc research project examining the carbon cost of machine learning image analysis competitions.</p>
-    <details>
-      <summary>Details</summary>
-      <p>We attempted to calculate the carbon footprint of an entire Kaggle machine learning competition, rather than just a single trained model. The results highlighted the significant energy consumption and associated emissions, prior to the advent of widespread generative AI adoption.</p>
-      <a href="../projects/carbon_cost.html">Read more here</a>
-    </details>
-  </div>
-
-<!-- Copy one of the blocks above for each new project. Swap the badge classes:
-       badge-type-research or badge-type-personal
-       badge-status-complete or badge-status-progress -->
-
-</div>
-<script>
-(function() {
-  const grid = document.getElementById('project-grid');
-  const cards = Array.from(grid.querySelectorAll('.project-card'));
-  const filterBar = document.getElementById('project-filters');
-
-  const groups = {
-    type: { label: 'Type', values: new Set(), active: new Set() },
-    status: { label: 'Status', values: new Set(), active: new Set() },
-    tags: { label: 'Tags', values: new Set(), active: new Set() }
-  };
-
-  cards.forEach(card => {
-    groups.type.values.add(card.dataset.type);
-    groups.status.values.add(card.dataset.status);
-    (card.dataset.tags || '').split(',').map(t => t.trim()).filter(Boolean)
-      .forEach(tag => groups.tags.values.add(tag));
-  });
-
-  function buildGroup(key) {
-    const g = groups[key];
-    const wrap = document.createElement('div');
-    wrap.className = 'filter-group';
-
-    const label = document.createElement('span');
-    label.className = 'filter-group-label';
-    label.textContent = g.label + ':';
-    wrap.appendChild(label);
-
-    Array.from(g.values).sort().forEach(value => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'filter-pill';
-      btn.textContent = value;
-      btn.dataset.group = key;
-      btn.dataset.value = value;
-      btn.addEventListener('click', () => {
-        btn.classList.toggle('active');
-        if (g.active.has(value)) g.active.delete(value);
-        else g.active.add(value);
-        applyFilters();
-      });
-      wrap.appendChild(btn);
-    });
-
-    return wrap;
-  }
-
-  filterBar.appendChild(buildGroup('type'));
-  filterBar.appendChild(buildGroup('status'));
-  filterBar.appendChild(buildGroup('tags'));
-
-  function applyFilters() {
-    cards.forEach(card => {
-      const cardTags = (card.dataset.tags || '').split(',').map(t => t.trim());
-      const typeOk = groups.type.active.size === 0 || groups.type.active.has(card.dataset.type);
-      const statusOk = groups.status.active.size === 0 || groups.status.active.has(card.dataset.status);
-      const tagsOk = groups.tags.active.size === 0 ||
-        cardTags.some(t => groups.tags.active.has(t));
-
-      card.style.display = (typeOk && statusOk && tagsOk) ? '' : 'none';
-    });
-  }
-})();
-</script>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>I investigated whether an LLM actually reasons through comparison questions (“who was born earlier, X or Y?”) or just pattern-matches its way to the right answer. This followed on from Ray Choudhury et al.’s (2022) framework for testing reasoning in BERT-style models, applying it instead to a generative model, OLMo 7B 0724 Instruct.</p>
+<p>I used two independent tests. First, counterfactual questions: I took comparison questions from HotpotQA and 2WikiMultihopQA and flipped the comparison term (earlier → later, older → younger, etc.), swapping the expected answer accordingly. A model that’s actually reasoning should get both the original and the flipped version right, since neither should be harder than the other for a competent human. Second, saliency: using Integrated Gradients, I checked whether the model was paying attention to the tokens a human would consider relevant (the comparison word itself), rather than something else entirely.</p>
+</section>
+<section id="approach" class="level2">
+<h2 class="anchored" data-anchor-id="approach">Approach</h2>
+<section id="counterfactual-questions" class="level3">
+<h3 class="anchored" data-anchor-id="counterfactual-questions">Counterfactual questions</h3>
+<p>Around 9.6K question pairs were built by using NER to isolate questions with exactly two named entities and one of six comparison terms, then generating a perturbed counterpart for each. The model was scored as correct only if it got <em>both</em> versions of a pair right.</p>
+</section>
+<section id="saliency-with-integrated-gradients" class="level3">
+<h3 class="anchored" data-anchor-id="saliency-with-integrated-gradients">Saliency with Integrated Gradients</h3>
+<p>For the questions where I could get saliency scores, I split each question into two partitions: the comparison term itself (positive) and everything else in the question except the two entities (negative). A model reasoning as expected should weight the positive partition higher than the negative.</p>
+<section id="what-i-found" class="level4">
+<h4 class="anchored" data-anchor-id="what-i-found">What I found</h4>
+<ul>
+<li>The model got both questions in a pair right only 32.6% of the time, worse than a coin flip on the harder (perturbed) half, and it consistently performed better on the original phrasing than the flipped one.</li>
+<li>When it failed, in 78% of cases it gave the same answer to both questions, usually the one appropriate to the original wording, suggesting it was pattern-matching on phrasing rather than resolving the comparison itself.</li>
+<li>The saliency scores told a similar story: the model’s “important” tokens barely tracked the ones a human would flag, and there was very little overlap between the two tests overall (alignment between “correct answer” and “correct attention” was as low as 6.8% when requiring both).</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="status" class="level2">
+<h2 class="anchored" data-anchor-id="status">Status</h2>
+<p>This started as a course project, building on the framework from Ray Choudhury et al.&nbsp;(2022) and findings from Nikankin et al.&nbsp;(2024) that LLMs tend to rely on a “bag of heuristics” for reasoning tasks. It ended up being a loose jumping-off point for my thesis, which focused on the broader question of how to evaluate reasoning in LLMs. The code and data are available on GitHub, and a paper is available as a PDF below 😊</p>
+<p>Code: <a href="https://github.com/Xannadoo/comparision-reasoning-skills-llm">GitHub</a></p>
+<p>Paper: <a href="../projects/resources/olmo_comparison_reasoning.pdf">PDF</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

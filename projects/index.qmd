@@ -94,8 +94,9 @@ title: "Projects"
   <div class="project-card" data-type="research" data-status="completed" data-tags="Python, LLM, Statistics">
     <h3>Chain-of-Thought Faithfulness</h3>
     <div class="badge-row">
-      <span class="badge badge-type-research">Research &amp; Publication</span>
+      <span class="badge badge-type-research">Research</span>
       <span class="badge badge-status-complete">Complete</span>
+      <span class="badge badge-type-published">Published ⭐</span>
     </div>
     <div class="date-tags">Sept 2025</div>
     <div class="skill-tags">Python · LLM evaluation · Statistical analysis</div>
@@ -104,6 +105,38 @@ title: "Projects"
       <summary>Details</summary>
       <p>We found that the model changed its behaviour in response to a hint embedded in the prompt, without referencing that hint anywhere in its chain-of-thought. This implies that the COT is not a faithful representation of the underlying reasoning but would be better considered a post-hoc explaination. Published in the ACL Anthology as part of IJCNLP-AACL 2025, CHOMPS workshop.</p>
       <a href="https://aclanthology.org/2025.chomps-main.2/" target="_blank">Read the paper →</a>
+    </details>
+  </div>
+
+  <div class="project-card" data-type="research" data-status="completed" data-tags="Python, LLM, Reasoning">
+    <h3>Comparison Reasoning in LLMs</h3>
+    <div class="badge-row">
+      <span class="badge badge-type-research">Research</span>
+      <span class="badge badge-status-complete">Complete</span>
+    </div>
+    <div class="date-tags">Jan 2025</div>
+    <div class="skill-tags">Python · LLM evaluation · Comparison reasoning · Saliency analysis</div>
+    <p>MSc research project examining comparison reasoning in OLMo.</p>
+    <details>
+      <summary>Details</summary>
+      <p>I investigated whether OLMo actually reasons through comparison questions ("who was born earlier, X or Y?") or relies on pattern-matching to get the right answer, using saliency analysis and counterfactual testing. The results found that the model often failed to reason correctly through these questions, and showed limited attention to the relevant tokens.</p>
+      <a href="olmo_reasoning.qmd">Read more here</a>
+    </details>
+  </div>
+
+  <div class="project-card" data-type="research" data-status="completed" data-tags="Python, Image Analysis, Carbon Cost">
+    <h3>Carbon Cost of ML Image Competitions</h3>
+    <div class="badge-row">
+      <span class="badge badge-type-research">Research</span>
+      <span class="badge badge-status-complete">Complete</span>
+    </div>
+    <div class="date-tags">Jun 2023</div>
+    <div class="skill-tags">Python · Image Analysis · Carbon Cost</div>
+    <p>BSc research project examining the carbon cost of machine learning image analysis competitions.</p>
+    <details>
+      <summary>Details</summary>
+      <p>We attempted to calculate the carbon footprint of an entire Kaggle machine learning competition, rather than just a single trained model. The results highlighted the significant energy consumption and associated emissions, prior to the advent of widespread generative AI adoption.</p>
+      <a href="carbon_cost.qmd">Read more here</a>
     </details>
   </div>
 
