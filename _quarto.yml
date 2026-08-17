@@ -21,3 +21,8 @@ format:
     css: styles.css
     toc: false
     page-layout: article
+
+    include-in-header:
+      - text: |
+          <script data-goatcounter="https://yourcode.goatcounter.com/count"
+                  async src="//gc.zgo.at/count.js"></script>
