@@ -1,3 +1,22 @@
 ---
 title: "Notes ✨"
 ---
+```{=html}
+<div class="project-grid">
+
+  <div class="project-card">
+    <h2>Everyone Else's Finished Projects</h2>
+    <h4>17-August-2026</h4>
+    <div class="badge-row">
+      <span class="badge badge-type-musings">Musings</span>
+    </div>
+    <p>Why do other people's projects always seem more impressive than my own? I think part of the answer is that I see all the seams in mine, while everyone else's arrives looking shiny. Some thoughts on finished projects, unfinished seams, and feeling about twenty years behind.</p>
+    <a href="everyone_else_projects.qmd">I thought about it rather more than necessary</a>
+  </div>
+
+  <!-- Copy one of the blocks above for each new project. Swap the badge classes:
+       badge-type-research or badge-type-personal
+       badge-status-complete or badge-status-progress -->
+
+</div>
+```

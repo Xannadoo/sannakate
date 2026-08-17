@@ -1,0 +1,55 @@
+# Everyone else's finished project
+### 17-Aug-2026
+
+I was looking at my <a href="../projects/index.qmd">Projects</a> page here recently and thinking that my projects seem a bit...\
+...Underwhelming.
+
+Small. Weak. Not nearly as impressive as other people's.
+
+Even though one of those projects is my MSc thesis. It was published, and got a 12 in the exam. I was genuinely proud of it at the time. Part of that pride came from knowing my supervisor; I trusted that she wouldn't give me a 12 unless she thought I'd earned it. Yet I read somebody else's thesis and think *that's much more complicated than mine. Look at all the things they've done. Mine seems rather little by comparison.*
+
+There is a problem here: I know how my own work was done. I know the bits that didn't work. I know where the text parsing is imperfect in <a href="../projects/tefr_glyphs.qmd">Tefr Glyph Spell Checker</a>. I know which bits of code are inelegant. I know the <a href="../projects/meal_planner.qmd">Meal Planner</a> UI is clunky because I'm not a software developer and have been teaching myself Streamlit so that people can actually use some of my projects without having to know how to clone a repository and run a Python script for themselves.
+
+I know every shortcut I took. Other people's projects arrive finished. I don't see the bugs they fixed or the approaches they abandoned. I don't see the design they changed three times because it just wouldn't work. I don't see the bits they still don't fully understand, the file they daren't edit because the whole project breaks and they have no idea why. I see the thing that survived all of that and came out shiny and polished.
+
+This is one reason I like project documentation that includes the failures.
+
+For some of my own projects, I keep a failure log, a part of the README that documents each bump in the road, what went wrong, what I tried, and whether I eventually fixed it or found a way around to just live with it. I like seeing that side of other people's work too. It makes the finished thing more interesting. To me, it shows the whole process rather than presenting the final version as the only one. A window into how people think, how they solve problems. People are interesting.
+
+But I don't naturally give myself the same benefit. Outside of data science, I do the same thing.
+
+I don't buy knitted or crocheted things very often, especially not mass-produced ones. I look at them and think: *I could make that.* Which is technically true. I can knit. I can crochet. Rather well actually, if slowly. I know roughly how the thing was made. I could buy the wool, find or make up a pattern, spend an unreasonable number of hours making it, and eventually have something akin to the thing. I almost definitely  won't, because I don't have the time, and I have an insurmountable number of half-finished things already.
+
+But somehow the fact that I *could* make it makes it feel less worth buying. Knowing how something works seems to take some of the magic out of it and I think I do the same thing with my own skills.
+
+I can code now. I can explain Bayes' theorem in my sleep. I know why accuracy is a terrible metric in a lot of situations. I listen to statistics podcasts for fun and surprise myself by understanding what they're talking about. These things don't feel particularly impressive because they're things *I* can do. There was a time when they weren't and I remember not knowing how to do them. I remember things that seemed impossibly complicated becoming understandable. I remember the satisfaction of getting something to work for the first time. But once I can do something, it stops being evidence that I can do things. It's just another thing I can do, like brush my teeth. It's mundane now. If I can do it, anyone could. And then I look at somebody else's work and see all the things *they* can do that I can't. I suspect this is partly why other people's achievements can have a sense of wonder that our own don't. 
+
+We see what they have made, but we don't see the person who made all the mistakes required to get there. We see only the shiny finished project. We live inside our own development history and the same thing happens with careers.
+
+I have a fairly non-linear one. I trained as a nurse, ran a cash office, worked in local government, and ended up in Denmark doing an MSc in data science, discovering somewhere along the way that I wanted to continue in research. From the outside, that might look like an unusual collection of experiences. From the inside, it sometimes feels like being about twenty years behind everyone else. I look at people who went straight into computer science, then a master's, then a PhD, then a research job, and see a coherent trajectory. I see everything they have learned and everything they have accomplished. And then I see my own missing years.
+
+And this is where the comparison becomes much less harmless. 
+
+If I were good enough as a data scientist, someone would have hired me as a data scientist by now.
+
+If I were good enough as a researcher, I'd have a PhD position by now.
+
+Instead, I've been a housekeeper for a year.
+
+That is a difficult argument to dismiss when you're the person making it. But I think (I hope!) there is something wrong with the measurement. It's too black and white. A job offer is evidence that somebody hired you. It isn't a direct measurement of your competence. Thinking of some people I've worked with, it's definitely not. Not getting a position is evidence that you weren't selected for that particular one. It isn't necessarily evidence that you aren't capable of doing it.
+
+There are applicant pools, available places, internal candidates, timing, funding, particular research interests, particular combinations of skills, personalities and an enormous amount of information that I don't have access to. None of that means rejection doesn't matter. It does. It hurts. 
+
+And my skill of looking for patterns and finding evidence to explain them turns that huge pool of unknowable information into one overly simple conclusion:
+
+*I'm not good enough.*
+
+There is a particularly annoying paradox here: *The more you know, the more you know you don't know*.
+
+When I knew very little about statistics, I could look at someone who understood it and think they were exceptionally clever. Now I still think they are exceptionally clever because I know enough to understand how much there is to know and I assume they know more than I do. I can see the assumptions behind the method, the limitations of a model, the things I haven't learned yet, the things I probably should know, and the things that someone else understands much better than I do. I can't see those things in quite the same way when I look at somebody else. People generally don't wave their unfinished work around, they show you what they want you to see. On social media, this is particularly obvious, but I think it happens everywhere. You see someone's paper, their project, their new job, their conference talk, their finished jumper. 
+
+You don't see the abandoned drafts, the things they had to look up, the afternoon they spent wondering why their code wasn't working or the things they still don't understand. I see all of that in myself. Maybe that's part of the problem.
+
+I have spent a lot of time deliberately trying to document the failures in my projects because I think finished work gives a misleading impression of how things are made. Perhaps I need to remember that I'm not seeing that part when I look at other people's work. Their finished project is not evidence that they had a straightforward path to it and my messy development history is not evidence that I shouldn't have got there. I don't think this completely fixes the feeling of not being enough. 
+
+I'll always look at other people's work and think, *that's impressive* and I'll always look at my own and see the flaws first.  That's part of who I am. But perhaps competence doesn't feel like evidence of competence once you possess it because you're uniquely positioned to see everything that went into it. Other people get to see the finished thing; you get to see all the unfinished seams that you hid at the back and are hoping don't fray. Maybe the seams aren't evidence that the thing is badly made. Maybe they're just evidence that you made it.

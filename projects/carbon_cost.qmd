@@ -27,4 +27,4 @@ Completed as our BSc thesis for the Data Science BSc, IT University of Copenhage
 
 Code and data: [GitHub](https://github.com/carbonCostKaggle)
 
-Paper: [PDF](/projects/files/carbon_footprint_ml_competitions.pdf)
+Paper: [PDF](/projects/resources/Carbon_Footprint_of_Machine_Learning_Competitions_With_Medical_Images.pdf)

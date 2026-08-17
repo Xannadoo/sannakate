@@ -145,8 +145,13 @@ a:hover {
   color: #1a7a4c;
 }
 
+.badge-type-musings {
+  background: #e0f4ea;
+  color: #14508d;
+}
+
 .badge-status-complete {
-  background: #e6f0ff;
+  background: #d1dae9;
   color: #1a4d8f;
 }
 
