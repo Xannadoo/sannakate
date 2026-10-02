@@ -47,7 +47,7 @@ I work best on problems without a clean answer yet, alongside people willing to 
 
 **Technical:** Python, R, SQL, machine learning, statistical analysis, Git, Docker, Singularity, Linux, HPC/Slurm, data pipelines, data wrangling, model evaluation, visualisation, LLMs, NLP, LaTex
 
-**Professional:** Teaching, technical communication, problem-solving, process improvement, details, critical thinking, being a good human,
+**Professional:** Teaching, technical communication, problem-solving, process improvement, details, critical thinking, being a good human
 
 ## Experience
 
@@ -55,7 +55,7 @@ I work best on problems without a clean answer yet, alongside people willing to 
 <details class="cv-entry">
   <summary><strong>Housekeeping &amp; Admin Assistant</strong> — AC Bella Sky, Copenhagen — Sept 2025 – present</summary>
   <ul>
-    <li>Approved shifts for payroll, monitored housekeeper efficiency. investigating and reporting discrepancies</li>
+    <li>Approved shifts for payroll, monitored housekeeper efficiency. Investigating and reporting discrepancies</li>
     <li>Inspected rooms to ensure standards were met, giving feedback to housekeepers where needed</li>
     <li>Undertook housekeeping duties in a very large hotel</li>
   </ul>
